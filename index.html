@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBSJ Data Mining & Analytics | Estudo Estatístico de Movimentos Aéreos</title>
+  <meta name="description" content="Estudo estatístico e mineração de dados aéreos do Aeroporto de São José dos Campos (SBSJ) cobrindo mais de 340.000 movimentos com filtros interativos.">
+  
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header-nav">
+    <div class="brand">
+      <div class="brand-icon">
+        <i class="fa-solid fa-plane-departure"></i>
+      </div>
+      <div class="brand-title">
+        <h1>AERO MINING &bull; SBSJ</h1>
+        <p>Inteligência Estatística & Mineração de Dados de Tráfego Aéreo (2015 &ndash; 2026)</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="themeToggleBtn" class="theme-toggle-btn" title="Alternar tema">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+        <span id="themeText">Modo Claro</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Container Principal -->
+  <main class="main-container">
+
+    <!-- Card de Filtros Interativos em Tempo Real -->
+    <section class="filters-card">
+      <div class="filters-header">
+        <div class="filters-title">
+          <i class="fa-solid fa-sliders"></i>
+          <span>Filtros Multidimensionais Reativos</span>
+        </div>
+        <button id="btnResetFilters" class="filter-btn-reset" title="Restaurar valores padrão">
+          <i class="fa-solid fa-rotate-left"></i> Limpar Filtros
+        </button>
+      </div>
+
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="filterAno"><i class="fa-regular fa-calendar"></i> Ano</label>
+          <select id="filterAno" class="filter-select">
+            <option value="ALL">Todos os Anos (2015 - 2026)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filterTv"><i class="fa-solid fa-tag"></i> Tipo de Voo</label>
+          <select id="filterTv" class="filter-select">
+            <option value="ALL">Todos os Tipos de Voo</option>
+            <option value="G">G - Aviação Geral / Civil</option>
+            <option value="M">M - Militar (FAB / BAVEX / DCTA)</option>
+            <option value="S">S - Comercial Regular</option>
+            <option value="X">X - Experimental / Testes (Embraer)</option>
+            <option value="N">N - Não Regular / Táxi Aéreo</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filterOperacao"><i class="fa-solid fa-plane"></i> Tipo de Operação</label>
+          <select id="filterOperacao" class="filter-select">
+            <option value="ALL">Todas as Operações</option>
+            <option value="TGL">TGL - Toque e Arremetida (Treino)</option>
+            <option value="DEP">DEP - Decolagem</option>
+            <option value="ARR">ARR - Pouso</option>
+            <option value="QAF">QAF - Circuito / Teste Especial</option>
+            <option value="LOW">LOW - Passagem Baixa</option>
+            <option value="QAY">QAY - Ponto Fora de Pista</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filterPista"><i class="fa-solid fa-road"></i> Cabeceira de Pista</label>
+          <select id="filterPista" class="filter-select">
+            <option value="ALL">Todas as Pistas</option>
+            <option value="15_16">15 / 16 (Cabeceira Principal - SE)</option>
+            <option value="33_34">33 / 34 (Cabeceira Secundária - NW)</option>
+            <option value="0">0 (Área Heliponto / Solo)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filterCategoria"><i class="fa-solid fa-helicopter"></i> Categoria de Aeronave</label>
+          <select id="filterCategoria" class="filter-select">
+            <option value="ALL">Todas as Categorias</option>
+            <option value="Treinamento / Monomotor">Treinamento / Monomotor</option>
+            <option value="Helicóptero">Helicóptero</option>
+            <option value="Turboélice / Regional">Turboélice / Regional</option>
+            <option value="Bimotor Pistão">Bimotor Pistão</option>
+            <option value="Jato (Executivo / Comercial)">Jato (Executivo / Comercial)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPIs Dinâmicos -->
+    <section class="kpis-grid">
+      <div class="kpi-card cyan">
+        <div class="kpi-header">
+          <span class="kpi-label">Movimentos Filtrados</span>
+          <i class="fa-solid fa-chart-line kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiTotal">---</div>
+        <div class="kpi-subtext" id="kpiPctGlobal">100% da base histórica total</div>
+      </div>
+
+      <div class="kpi-card amber">
+        <div class="kpi-header">
+          <span class="kpi-label">Treinamento & Instrução (TGL)</span>
+          <i class="fa-solid fa-graduation-cap kpi-icon" style="color: var(--accent-amber);"></i>
+        </div>
+        <div class="kpi-value" id="kpiTGL" style="color: var(--accent-amber);">---</div>
+        <div class="kpi-subtext">Toques e arremetidas de alunos e instrutores</div>
+      </div>
+
+      <div class="kpi-card emerald">
+        <div class="kpi-header">
+          <span class="kpi-label">Regra Visual (VFR)</span>
+          <i class="fa-solid fa-eye kpi-icon" style="color: var(--accent-emerald);"></i>
+        </div>
+        <div class="kpi-value" id="kpiVFR" style="color: var(--accent-emerald);">---</div>
+        <div class="kpi-subtext">Operações sob condições visuais favoráveis</div>
+      </div>
+
+      <div class="kpi-card purple">
+        <div class="kpi-header">
+          <span class="kpi-label">Direção Pista 15/16 (Sudeste)</span>
+          <i class="fa-solid fa-compass kpi-icon" style="color: var(--accent-purple);"></i>
+        </div>
+        <div class="kpi-value" id="kpiPista" style="color: var(--accent-purple);">---</div>
+        <div class="kpi-subtext">Vento predominante do Vale do Paraíba</div>
+      </div>
+
+      <div class="kpi-card rose">
+        <div class="kpi-header">
+          <span class="kpi-label">Média Operacional Diária</span>
+          <i class="fa-solid fa-clock-rotate-left kpi-icon" style="color: var(--accent-rose);"></i>
+        </div>
+        <div class="kpi-value" id="kpiMediaDia" style="color: var(--accent-rose);">---</div>
+        <div class="kpi-subtext">Operações registradas pela torre por dia</div>
+      </div>
+    </section>
+
+    <!-- Síntese de Descobertas e Inferências Estatísticas -->
+    <section class="insights-container">
+      <div class="section-title" style="margin-bottom: 0.5rem;">
+        <i class="fa-solid fa-brain"></i>
+        <span>Descobertas Estatísticas & Mineração de Conhecimento Científico</span>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-muted);">
+        Aplicações de Data Mining e inferência estatística sobre 341.468 registros de voo no Aeroporto Professor Urbano Ernesto Stumpf (SBSJ):
+      </p>
+
+      <div class="insights-grid">
+        <div class="insight-box">
+          <h4><i class="fa-solid fa-magnet"></i> 1. Deriva Magnética da Terra Registrada em Pista</h4>
+          <p>
+            O data mining revelou que em <strong>2020</strong> as operações na cabeceira <strong>15/33 migraram bruscamente para 16/34</strong>. Esse fenômeno não decorre de obras físicas, mas sim da <em>declinação do campo magnético terrestre</em>, que alterou os rumos magnéticos oficiais publicados pelo DECEA.
+          </p>
+        </div>
+
+        <div class="insight-box">
+          <h4><i class="fa-solid fa-wind"></i> 2. Micrometeorologia & Alinhamento de Vento</h4>
+          <p>
+            Mais de <strong>84,7% de todas as chegadas e partidas</strong> utilizam as cabeceiras 15/16 (orientação Sudeste). Isso infere que a orografia entre a Serra da Mantiqueira e a Serra do Mar canaliza brisas marítimas predominantes em proa constante, permitindo operação de alta eficiência sem vento de través severo.
+          </p>
+        </div>
+
+        <div class="insight-box">
+          <h4><i class="fa-solid fa-industry"></i> 3. Eixo Tecnológico Industrial Embraer</h4>
+          <p>
+            A rota externa de maior frequência é <strong>SBSJ &harr; SBGP (Gavião Peixoto)</strong>, com mais de 5.600 voos e altíssimo índice de voos experimentais (X) e militares (M), evidenciando a ponte aérea industrial e logística que interliga a sede da fabricante com sua maior pista de ensaios em voo.
+          </p>
+        </div>
+
+        <div class="insight-box">
+          <h4><i class="fa-solid fa-shield-halved"></i> 4. Resiliência Pandêmica Antifrágil (2020)</h4>
+          <p>
+            Enquanto aeroportos comerciais convencionais amargaram quedas superiores a 85% na pandemia de 2020, o SBSJ manteve volume resiliente sustentado pela presença militar (DCTA/FAB/BAVEX) e a pronta recuperação do polo de instrução civil no segundo semestre de 2020.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visualizações Gráficas -->
+    <section>
+      <div class="section-title">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Análise Visual Exploratória</span>
+      </div>
+
+      <div class="charts-grid-2">
+        <!-- Gráfico 1: Série Temporal Anual -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Série Temporal Histórica (2015 &ndash; 2026)</h3>
+            <span class="chart-badge">Volume Anual</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartEvolucaoAnual"></canvas>
+          </div>
+        </div>
+
+        <!-- Gráfico 2: Padrão Circadiano / Horário Local -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Distribuição por Horário Local (UTC-3)</h3>
+            <span class="chart-badge">Ritmo Circadiano</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartHorario"></canvas>
+          </div>
+        </div>
+
+        <!-- Gráfico 3: Matriz de Tipos de Operações -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Perfil de Operações Aéreas</h3>
+            <span class="chart-badge">Operações</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartOperacoes"></canvas>
+          </div>
+        </div>
+
+        <!-- Gráfico 4: Top Modelos de Aeronaves -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Top 10 Aeronaves Mais Frequentes</h3>
+            <span class="chart-badge">Modelos de Frota</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartAeronaves"></canvas>
+          </div>
+        </div>
+
+        <!-- Gráfico 5: Transição Histórica de Pistas -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Transição de Pistas: 15 &rarr; 16 e 33 &rarr; 34</h3>
+            <span class="chart-badge">Declinação Magnética</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartPistasTransicao"></canvas>
+          </div>
+        </div>
+
+        <!-- Gráfico 6: Top Rotas Conectadas -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h3>Top Rotas Inter-Aeroportos</h3>
+            <span class="chart-badge">Conexões SBSJ</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="chartRotas"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Módulo de Mineração de Dados Avançada -->
+    <section>
+      <div class="section-title">
+        <i class="fa-solid fa-network-wired"></i>
+        <span>Técnicas de Mineração de Dados (Data Mining)</span>
+      </div>
+
+      <div class="mining-grid">
+        <!-- Mineração de Regras de Associação -->
+        <div class="mining-card">
+          <div class="mining-card-header">
+            <div class="mining-icon-badge cyan">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <div>
+              <h3 style="font-size: 1.05rem; font-weight: 700;">Regras de Associação Mineradas</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Algoritmo de Frequência de Padrões (Association Rules & Lift)</p>
+            </div>
+          </div>
+          <div id="rulesContainer">
+            <!-- Injetado dinamicamente via JS -->
+          </div>
+        </div>
+
+        <!-- Clusterização Não Supervisionada K-Means -->
+        <div class="mining-card">
+          <div class="mining-card-header">
+            <div class="mining-icon-badge amber">
+              <i class="fa-solid fa-shapes"></i>
+            </div>
+            <div>
+              <h3 style="font-size: 1.05rem; font-weight: 700;">Perfis de Dias Operacionais (Clusters K-Means)</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Segmentação de dias por composição de voo, regras e operações</p>
+            </div>
+          </div>
+          <div id="clustersContainer">
+            <!-- Injetado dinamicamente via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detecção de Anomalias Estatísticas -->
+    <section>
+      <div class="section-title">
+        <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-rose);"></i>
+        <span>Detecção de Anomalias Estatísticas (Outlier Detection | Z-Score)</span>
+      </div>
+
+      <div class="mining-card" style="border-left: 4px solid var(--accent-rose);">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Dias identificados com desvio padrão extremo (&plusmn;2,5 &sigma; da média histórica de ~82 voos/dia), evidenciando picos excepcionais e paralisações operacionais:
+        </p>
+        <div id="anomaliesContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Explorador de Registros com Busca e Paginação -->
+    <section class="table-card">
+      <div class="filters-header" style="margin-bottom: 1rem;">
+        <div class="filters-title">
+          <i class="fa-solid fa-table-list"></i>
+          <span>Explorador de Movimentos Registrados</span>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="tableSearchInput" placeholder="Filtrar por matrícula, modelo, operador, rota...">
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table id="movementsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Data</th>
+              <th>Hora Local</th>
+              <th>Matrícula</th>
+              <th>Modelo</th>
+              <th>Categoria</th>
+              <th>Tipo Voo</th>
+              <th>Origem</th>
+              <th>Destino</th>
+              <th>Pista</th>
+              <th>Regra</th>
+              <th>Operação</th>
+              <th>Operador</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Linhas renderizadas dinamicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination-controls">
+        <span id="tableInfo">Exibindo registros...</span>
+        <div class="page-btn-group">
+          <button id="btnPrevPage" class="page-btn"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+          <button id="btnNextPage" class="page-btn">Próxima <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Estudo Estatístico e Mineração de Dados &bull; Base: Aeroporto de São José dos Campos (SBSJ) &bull; 341.468 Movimentos</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem; opacity: 0.7;">Desenvolvido com técnicas de Ciência de Dados moderna, Análise Exploratória e Mineração de Regras.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
