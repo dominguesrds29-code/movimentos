@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -40,7 +40,7 @@
     <div class="header-actions">
       <button id="themeToggleBtn" class="theme-toggle-btn" title="Alternar tema">
         <i class="fa-solid fa-moon" id="themeIcon"></i>
-        <span id="themeText">Modo Claro</span>
+        <span id="themeText">Modo Escuro</span>
       </button>
     </div>
   </header>
@@ -639,10 +639,12 @@
 
   <!-- Rodapé -->
   <footer>
-    <p>Estudo Estatístico e Mineração de Dados &bull; Base: Aeroporto de São José dos Campos (SBSJ) &bull; 341.468
-      Movimentos</p>
-    <p style="margin-top: 0.35rem; font-size: 0.75rem; opacity: 0.7;">Desenvolvido com técnicas de Ciência de Dados
-      moderna, Análise Exploratória e Mineração de Regras.</p>
+    <p>Estudo Estatístico e Mineração de Dados &bull; Base de Movimentos Aéreos: Aeroporto de São José dos Campos (SBSJ) &bull; 341.468 Registros</p>
+    <p style="margin-top: 0.35rem; font-size: 0.8rem; opacity: 0.85;">
+      <i class="fa-solid fa-tower-broadcast" style="color: var(--accent-cyan); margin-right: 4px;"></i>
+      Fonte de Dados: Registros operacionais provenientes do sistema <strong>TATIC (Saipher ATC)</strong> &bull; Torre de Controle (TWR SBSJ / FAB)
+    </p>
+    <p style="margin-top: 0.25rem; font-size: 0.75rem; opacity: 0.65;">Desenvolvido com técnicas de Ciência de Dados moderna, Análise Exploratória e Mineração de Padrões.</p>
   </footer>
 
   <script src="app.js"></script>

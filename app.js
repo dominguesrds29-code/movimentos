@@ -52,10 +52,10 @@ function setupThemeToggle() {
     html.setAttribute('data-theme', newTheme);
 
     if (newTheme === 'light') {
-      icon.className = 'fa-solid fa-sun';
+      icon.className = 'fa-solid fa-moon';
       text.textContent = 'Modo Escuro';
     } else {
-      icon.className = 'fa-solid fa-moon';
+      icon.className = 'fa-solid fa-sun';
       text.textContent = 'Modo Claro';
     }
 
