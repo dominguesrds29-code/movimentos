@@ -172,9 +172,9 @@
 
       <div class="insights-grid">
         <div class="insight-box">
-          <h4><i class="fa-solid fa-magnet"></i> 1. Deriva Magnética da Terra Registrada em Pista</h4>
+          <h4><i class="fa-solid fa-cloud-sun"></i> 1. Climatologia & Sazonalidade Operacional</h4>
           <p>
-            O data mining revelou que em <strong>2020</strong> as operações na cabeceira <strong>15/33 migraram bruscamente para 16/34</strong>. Esse fenômeno não decorre de obras físicas, mas sim da <em>declinação do campo magnético terrestre</em>, que alterou os rumos magnéticos oficiais publicados pelo DECEA.
+            A mineração estatística mensal revela uma forte correlação climática: os meses de <strong>inverno (junho a agosto) concentram o pico de intensidade operacional (~87,7 voos/dia)</strong>, favorecidos pelo ar seco e estabilidade atmosférica no Vale do Paraíba. Em contraste, o <strong>verão sofre retração (~65,1 voos/dia em janeiro)</strong> devido a tempestades convectivas vespertinas que limitam voos visuais (VFR).
           </p>
         </div>
 
@@ -253,14 +253,14 @@
           </div>
         </div>
 
-        <!-- Gráfico 5: Transição Histórica de Pistas -->
+        <!-- Gráfico 5: Sazonalidade Mensal do Tráfego -->
         <div class="chart-card">
           <div class="chart-card-header">
-            <h3>Transição de Pistas: 15 &rarr; 16 e 33 &rarr; 34</h3>
-            <span class="chart-badge">Declinação Magnética</span>
+            <h3>Sazonalidade Mensal &amp; Médias Diárias (Jan &ndash; Dez)</h3>
+            <span class="chart-badge">Ciclo Anual</span>
           </div>
           <div class="chart-body">
-            <canvas id="chartPistasTransicao"></canvas>
+            <canvas id="chartSazonalidade"></canvas>
           </div>
         </div>
 
@@ -293,7 +293,7 @@
             </div>
             <div>
               <h3 style="font-size: 1.05rem; font-weight: 700;">Regras de Associação Mineradas</h3>
-              <p style="font-size: 0.8rem; color: var(--text-muted);">Algoritmo de Frequência de Padrões (Association Rules & Lift)</p>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Algoritmo de Frequência de Padrões e Mineração de Regras de Associação</p>
             </div>
           </div>
           <div id="rulesContainer">

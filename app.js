@@ -59,8 +59,21 @@ function setupThemeToggle() {
     // Atualiza temas dos gráficos
     Object.values(charts).forEach(c => {
       if (c) {
-        c.options.scales?.x && (c.options.scales.x.grid.color = getGridColor());
-        c.options.scales?.y && (c.options.scales.y.grid.color = getGridColor());
+        if (c.options.scales?.x) {
+          c.options.scales.x.grid.color = getGridColor();
+          c.options.scales.x.ticks.color = getTextColor();
+        }
+        if (c.options.scales?.y) {
+          c.options.scales.y.grid.color = getGridColor();
+          c.options.scales.y.ticks.color = getTextColor();
+          if (c.options.scales.y.title) c.options.scales.y.title.color = getTextColor();
+        }
+        if (c.options.scales?.y1) {
+          if (c.options.scales.y1.grid) c.options.scales.y1.grid.color = getGridColor();
+        }
+        if (c.options.plugins?.legend?.labels) {
+          c.options.plugins.legend.labels.color = getTextColor();
+        }
         c.update();
       }
     });
@@ -304,34 +317,103 @@ function initCharts() {
     }
   });
 
-  // 5. Gráfico Transição Histórica de Pistas (Declinação Magnética 15->16 e 33->34)
-  const ctxPistas = document.getElementById('chartPistasTransicao').getContext('2d');
-  const anosPistas = Object.keys(globalData.pistas_anuais);
-  const p15 = anosPistas.map(ano => globalData.pistas_anuais[ano]['15.0'] || 0);
-  const p16 = anosPistas.map(ano => globalData.pistas_anuais[ano]['16.0'] || 0);
-  const p33 = anosPistas.map(ano => globalData.pistas_anuais[ano]['33.0'] || 0);
-  const p34 = anosPistas.map(ano => globalData.pistas_anuais[ano]['34.0'] || 0);
+  // 5. Gráfico Sazonalidade Mensal & Médias Diárias de Operação
+  const ctxSazonal = document.getElementById('chartSazonalidade').getContext('2d');
+  const mesesLabels = globalData.mensal_sazonal.map(m => m.mes_nome);
+  const totaisMensais = globalData.mensal_sazonal.map(m => m.total);
+  const mediasDiarias = globalData.mensal_sazonal.map(m => m.media_diaria);
 
-  charts.pistas = new Chart(ctxPistas, {
-    type: 'line',
+  charts.sazonalidade = new Chart(ctxSazonal, {
     data: {
-      labels: anosPistas,
+      labels: mesesLabels,
       datasets: [
-        { label: 'Pista 15 (Antiga)', data: p15, borderColor: '#f43f5e', borderWidth: 2, tension: 0.2 },
-        { label: 'Pista 16 (Atual)', data: p16, borderColor: '#10b981', borderWidth: 3, tension: 0.2 },
-        { label: 'Pista 33 (Antiga)', data: p33, borderColor: '#fbbf24', borderDash: [4, 4], borderWidth: 1.5 },
-        { label: 'Pista 34 (Atual)', data: p34, borderColor: '#3b82f6', borderDash: [4, 4], borderWidth: 2 }
+        {
+          type: 'bar',
+          label: 'Total de Movimentos',
+          data: totaisMensais,
+          backgroundColor: 'rgba(56, 189, 248, 0.45)',
+          borderColor: '#38bdf8',
+          borderWidth: 1.5,
+          borderRadius: 6,
+          yAxisID: 'y'
+        },
+        {
+          type: 'line',
+          label: 'Média Diária (voos/dia)',
+          data: mediasDiarias,
+          borderColor: '#f59e0b',
+          backgroundColor: '#f59e0b',
+          borderWidth: 3,
+          pointBackgroundColor: '#f59e0b',
+          pointBorderColor: '#ffffff',
+          pointBorderWidth: 1.5,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          tension: 0.3,
+          yAxisID: 'y1'
+        }
       ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      interaction: {
+        mode: 'index',
+        intersect: false
+      },
       plugins: {
-        legend: { labels: { color: getTextColor(), boxWidth: 12 } }
+        legend: {
+          display: true,
+          labels: { color: getTextColor(), boxWidth: 12 }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              if (context.dataset.yAxisID === 'y1') {
+                return ` ${context.dataset.label}: ${context.raw} voos/dia`;
+              }
+              return ` ${context.dataset.label}: ${context.raw.toLocaleString('pt-BR')} movimentos`;
+            }
+          }
+        }
       },
       scales: {
-        x: { grid: { color: getGridColor() }, ticks: { color: getTextColor() } },
-        y: { grid: { color: getGridColor() }, ticks: { color: getTextColor() } }
+        x: {
+          grid: { color: getGridColor() },
+          ticks: { color: getTextColor() }
+        },
+        y: {
+          type: 'linear',
+          position: 'left',
+          grid: { color: getGridColor() },
+          ticks: {
+            color: getTextColor(),
+            callback: value => value >= 1000 ? `${(value / 1000).toFixed(0)}k` : value
+          },
+          title: {
+            display: true,
+            text: 'Total de Movimentos',
+            color: getTextColor(),
+            font: { size: 11 }
+          }
+        },
+        y1: {
+          type: 'linear',
+          position: 'right',
+          grid: { drawOnChartArea: false },
+          min: 50,
+          max: 100,
+          ticks: {
+            color: '#f59e0b',
+            callback: value => `${value}/d`
+          },
+          title: {
+            display: true,
+            text: 'Média Voos/Dia',
+            color: '#f59e0b',
+            font: { size: 11 }
+          }
+        }
       }
     }
   });
@@ -390,7 +472,6 @@ function renderMiningRules(rules) {
         <div class="rule-chips">
           <span class="chip chip-sup">Suporte: ${r.suporte}</span>
           <span class="chip chip-conf">Confiança: ${r.confianca}</span>
-          <span class="chip chip-lift">Lift: ${r.lift}</span>
         </div>
       </div>
       <div class="rule-statement">
