@@ -45,15 +45,36 @@
     </div>
   </header>
 
+  <!-- Barra de Navegação por Perspectivas (Abas) -->
+  <nav class="perspective-nav">
+    <div class="perspective-tabs">
+      <button class="perspective-tab-btn active" data-tab="tab-operacional" id="tabBtnOperacional">
+        <i class="fa-solid fa-plane"></i>
+        <span>Voos &amp; Aeronaves</span>
+        <span class="tab-badge">Operacional</span>
+      </button>
+      <button class="perspective-tab-btn" data-tab="tab-operadores" id="tabBtnOperadores">
+        <i class="fa-solid fa-headset"></i>
+        <span>Controladores &amp; Escala TWR</span>
+        <span class="tab-badge">Fator Humano &bull; 101 Controladores</span>
+      </button>
+    </div>
+  </nav>
+
   <!-- Container Principal -->
   <main class="main-container">
 
-    <!-- Card de Filtros Interativos em Tempo Real -->
-    <section class="filters-card">
+    <!-- ====================================================================
+         PERSPECTIVA: VOOS & AERONAVES (OPERACIONAL)
+         ==================================================================== -->
+    <div id="tab-operacional" class="tab-pane active">
+
+      <!-- Card de Filtros Interativos em Tempo Real -->
+      <section class="filters-card">
       <div class="filters-header">
         <div class="filters-title">
           <i class="fa-solid fa-sliders"></i>
-          <span>Filtros Multidimensionais Reativos</span>
+          <span>Filtros Reativos</span>
         </div>
         <button id="btnResetFilters" class="filter-btn-reset" title="Restaurar valores padrão">
           <i class="fa-solid fa-rotate-left"></i> Limpar Filtros
@@ -169,7 +190,7 @@
     <section class="insights-container">
       <div class="section-title" style="margin-bottom: 0.5rem;">
         <i class="fa-solid fa-brain"></i>
-        <span>Descobertas Estatísticas & Mineração de Conhecimento Científico</span>
+        <span>Descobertas Estatísticas e Mineração de Conhecimento</span>
       </div>
       <p style="font-size: 0.88rem; color: var(--text-muted);">
         Aplicações de Data Mining e inferência estatística sobre 341.468 registros de voo no Aeroporto Professor Urbano
@@ -402,7 +423,218 @@
         </div>
       </div>
     </section>
+    </div>
 
+    <!-- ====================================================================
+         PERSPECTIVA: CONTROLADORES DE TRÁFEGO AÉREO (TWR SBSJ / FAB)
+         ==================================================================== -->
+    <div id="tab-operadores" class="tab-pane">
+
+      <!-- KPIs Estratégicos de Gestão de Turnos e Controladores -->
+      <section class="kpis-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Controladores Registrados</span>
+            <div class="kpi-icon cyan"><i class="fa-solid fa-headset"></i></div>
+          </div>
+          <div class="kpi-value" id="kpiOpTotal" style="color: var(--accent-cyan);">101</div>
+          <div class="kpi-subtext">Logins operacionais de console registrados na TWR (2015-2026)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Controlador Mais Escalado (#1)</span>
+            <div class="kpi-icon amber"><i class="fa-solid fa-trophy"></i></div>
+          </div>
+          <div class="kpi-value" id="kpiOpLider" style="color: var(--accent-amber);">YSJH</div>
+          <div class="kpi-subtext" id="kpiOpLiderSub">18.360 movimentos controlados em console (5,38%)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Carga Top 10 Controladores</span>
+            <div class="kpi-icon indigo"><i class="fa-solid fa-chart-pie"></i></div>
+          </div>
+          <div class="kpi-value" id="kpiOpTop10" style="color: var(--accent-indigo);">37,5%</div>
+          <div class="kpi-subtext">127.876 movimentos operados pelos 10 controladores com maior escala</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Média por Controlador</span>
+            <div class="kpi-icon emerald"><i class="fa-solid fa-scale-balanced"></i></div>
+          </div>
+          <div class="kpi-value" id="kpiOpMedia" style="color: var(--accent-emerald);">~3.381</div>
+          <div class="kpi-subtext">Média histórica de movimentos operados por login de serviço</div>
+        </div>
+      </section>
+
+      <!-- Raio-X Interativo do Controlador Selecionado -->
+      <section class="operator-spotlight-card" id="operatorSpotlightCard">
+        <div class="operator-spotlight-header">
+          <div class="filters-title">
+            <i class="fa-solid fa-id-card-clip" style="color: var(--accent-cyan);"></i>
+            <span>Raio-X Operacional do Controlador (TWR SBSJ / FAB)</span>
+          </div>
+          <div class="operator-selector-wrapper">
+            <label for="selectOperadorSpotlight" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+              Selecione o Controlador (Login):
+            </label>
+            <select id="selectOperadorSpotlight" class="operator-select">
+              <!-- Populado dinamicamente com os 101 controladores -->
+            </select>
+          </div>
+        </div>
+
+        <div class="spotlight-content-grid">
+          <!-- Coluna 1: Identificação & Volume -->
+          <div class="spotlight-id-box">
+            <span class="spotlight-rank-tag" id="spotlightRank">Ranking #1</span>
+            <span class="spotlight-code" id="spotlightCode">YSJH</span>
+            <span class="spotlight-vol" id="spotlightTotal">18.360 movimentos</span>
+            <span class="spotlight-pct" id="spotlightPct">5,38% do volume histórico da torre</span>
+          </div>
+
+          <!-- Coluna 2: Indicadores Operacionais do Turno -->
+          <div class="spotlight-stats-grid">
+            <div class="spotlight-stat-item">
+              <span class="spotlight-stat-label">Missão Predominante no Turno</span>
+              <span class="spotlight-stat-value" id="spotlightTv">Aviação Geral</span>
+              <span class="spotlight-stat-sub" id="spotlightCat">Treinamento / Monomotor</span>
+            </div>
+            <div class="spotlight-stat-item">
+              <span class="spotlight-stat-label">Coordenação de Instrução (TGL)</span>
+              <span class="spotlight-stat-value" id="spotlightTgl" style="color: var(--accent-amber);">30.5%</span>
+              <span class="spotlight-stat-sub">Toques e arremetidas sob sua fonia</span>
+            </div>
+            <div class="spotlight-stat-item">
+              <span class="spotlight-stat-label">Tempo de Escala &amp; Turno</span>
+              <span class="spotlight-stat-value" id="spotlightLocal" style="font-size: 0.95rem;">2015 - 2026 (12 anos)</span>
+              <span class="spotlight-stat-sub" id="spotlightTurno">Turno Vespertino</span>
+            </div>
+            <div class="spotlight-stat-item">
+              <span class="spotlight-stat-label">Complexidade Gerenciada</span>
+              <span class="spotlight-stat-value" id="spotlightFrota">2.371 aeronaves</span>
+              <span class="spotlight-stat-sub" id="spotlightModelosQtd">275 modelos distintos</span>
+            </div>
+          </div>
+
+          <!-- Coluna 3: Aeronaves Mais Coordenadas -->
+          <div class="spotlight-models-box">
+            <div class="spotlight-models-title">
+              <span>Top Aeronaves Coordenadas</span>
+              <i class="fa-solid fa-plane-up"></i>
+            </div>
+            <div id="spotlightModelsList" style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <!-- Barras injetadas via JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-summary-box" id="spotlightSummary">
+          <!-- Texto descritivo gerado dinamicamente -->
+        </div>
+      </section>
+
+      <!-- Painel Gráfico de Controladores -->
+      <section>
+        <div class="section-title">
+          <i class="fa-solid fa-chart-column"></i>
+          <span>Análise de Carga de Trabalho &amp; Histórico da Escala TWR</span>
+        </div>
+
+        <div class="charts-grid-2">
+          <!-- Gráfico Op 1: Ranking Top 15 -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Top 15 Controladores com Maior Volume no Console</h3>
+              <span class="chart-badge">Movimentos Controlados</span>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartOpRanking"></canvas>
+            </div>
+          </div>
+
+          <!-- Gráfico Op 2: Evolução Histórica dos Top 5 -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Tempo de Atuação dos 5 Controladores Mais Escalados (2015 &ndash; 2026)</h3>
+              <span class="chart-badge">Série Histórica</span>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartOpEvolucao"></canvas>
+            </div>
+          </div>
+
+          <!-- Gráfico Op 3: Composição de Frota por Categoria -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Mix de Aeronaves Coordenadas no Turno (Top 10)</h3>
+              <span class="chart-badge">Categorias sob Controle</span>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartOpFrotas"></canvas>
+            </div>
+          </div>
+
+          <!-- Gráfico Op 4: Tipos de Missão e Voo -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <h3>Distribuição de Missões Gerenciadas (Top 10)</h3>
+              <span class="chart-badge">Perfis de Tráfego</span>
+            </div>
+            <div class="chart-body">
+              <canvas id="chartOpMissoes"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabela Completa dos 101 Controladores -->
+      <section class="table-card">
+        <div class="filters-header" style="margin-bottom: 1rem;">
+          <div class="filters-title">
+            <i class="fa-solid fa-list-ol"></i>
+            <span>Diretório da Escala de Controladores (101 Logins de Serviço FAB)</span>
+          </div>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="opTableSearchInput" placeholder="Filtrar por login do controlador, turno, missão...">
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table id="operatorsTable">
+            <thead>
+              <tr>
+                <th>Ranking</th>
+                <th>Login Controlador</th>
+                <th>Movimentos no Console</th>
+                <th>Fatia da Torre (%)</th>
+                <th>Período de Serviço</th>
+                <th>Turno Predominante</th>
+                <th>Aeronave Mais Coordenada</th>
+                <th>% Instrução (TGL)</th>
+                <th>Aeronaves Únicas</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody id="opTableBody">
+              <!-- Renderizado dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination-controls">
+          <span id="opTableInfo">Exibindo controladores...</span>
+          <div class="page-btn-group">
+            <button id="btnPrevOpPage" class="page-btn"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+            <button id="btnNextOpPage" class="page-btn">Próxima <i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <!-- Rodapé -->

@@ -12,6 +12,7 @@ let filteredSampleData = [];
 // Inicialização
 document.addEventListener('DOMContentLoaded', async () => {
   setupThemeToggle();
+  setupPerspectiveTabs();
   setupFilterEvents();
   setupTableEvents();
   
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderTable();
 
     initCharts();
+    setupOperatorPerspective();
+    initOperatorCharts();
     updateDashboard();
   } catch (err) {
     console.error('Erro ao inicializar:', err);
@@ -645,5 +648,366 @@ function renderTable() {
       <td style="font-family: var(--font-mono); color: var(--text-muted);">${r.operador}</td>
     `;
     tbody.appendChild(tr);
+  });
+}
+
+// ==========================================================================
+// PERSPECTIVA DE OPERADORES & GESTÃO DE FROTAS
+// ==========================================================================
+
+function setupPerspectiveTabs() {
+  const tabs = document.querySelectorAll('.perspective-tab-btn');
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+      
+      tabs.forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+        pane.style.display = 'none';
+      });
+
+      const activePane = document.getElementById(targetId);
+      if (activePane) {
+        activePane.style.display = 'flex';
+        activePane.classList.add('active');
+      }
+
+      // Redimensionar gráficos para preencher o canvas na aba visível
+      setTimeout(() => {
+        Object.values(charts).forEach(c => {
+          if (c) c.resize();
+        });
+      }, 50);
+    });
+  });
+}
+
+let opTableCurrentPage = 1;
+const OP_TABLE_PAGE_SIZE = 10;
+let filteredOperatorsList = [];
+
+function setupOperatorPerspective() {
+  if (!globalData || !globalData.kpis_operadores) return;
+
+  const kpis = globalData.kpis_operadores;
+  document.getElementById('kpiOpTotal').textContent = kpis.total_operadores;
+  document.getElementById('kpiOpLider').textContent = kpis.top1_operador;
+  document.getElementById('kpiOpLiderSub').textContent = `${kpis.top1_voos.toLocaleString('pt-BR')} movimentos no console (${kpis.top1_pct}% do tráfego)`;
+  document.getElementById('kpiOpTop10').textContent = `${kpis.concentracao_top10}%`;
+  document.getElementById('kpiOpMedia').textContent = `~${Math.round(kpis.media_por_operador).toLocaleString('pt-BR')}`;
+
+  // Popular Select do Spotlight com os 101 controladores
+  const select = document.getElementById('selectOperadorSpotlight');
+  select.innerHTML = '';
+  globalData.operadores_ranking.forEach(op => {
+    const opt = document.createElement('option');
+    opt.value = op.operador;
+    opt.textContent = `#${op.ranking} - Controlador ${op.operador} (${op.total.toLocaleString('pt-BR')} movs - ${op.periodo_ativo || ''})`;
+    select.appendChild(opt);
+  });
+
+  select.addEventListener('change', (e) => {
+    updateOperatorSpotlight(e.target.value);
+  });
+
+  // Renderizar Spotlight inicial com o Top 1
+  if (globalData.operadores_ranking.length > 0) {
+    updateOperatorSpotlight(globalData.operadores_ranking[0].operador);
+  }
+
+  // Configurar Tabela dos 101 Controladores
+  filteredOperatorsList = [...globalData.operadores_ranking];
+  setupOperatorTableEvents();
+  renderOperatorTable();
+}
+
+function updateOperatorSpotlight(opCode) {
+  const op = globalData.operadores_ranking.find(o => o.operador === opCode);
+  if (!op) return;
+
+  document.getElementById('spotlightRank').textContent = `Ranking de Escala #${op.ranking}`;
+  document.getElementById('spotlightCode').textContent = op.operador;
+  document.getElementById('spotlightTotal').textContent = `${op.total.toLocaleString('pt-BR')} movimentos`;
+  document.getElementById('spotlightPct').textContent = `${op.pct}% de todos os registros da TWR SBSJ`;
+  document.getElementById('spotlightTv').textContent = op.tv_predominante;
+  document.getElementById('spotlightCat').textContent = op.categoria_predominante;
+  document.getElementById('spotlightTgl').textContent = `${op.pct_tgl}%`;
+  document.getElementById('spotlightLocal').textContent = op.periodo_ativo || 'Escala Ativa';
+  
+  const elTurno = document.getElementById('spotlightTurno');
+  if (elTurno) {
+    elTurno.textContent = `${op.turno_predominante || 'Vespertino'} (${op.pct_turno || 0}% dos turnos)`;
+  }
+
+  document.getElementById('spotlightFrota').textContent = `${op.total_aeronaves.toLocaleString('pt-BR')} aeronaves distintas`;
+  document.getElementById('spotlightModelosQtd').textContent = `${op.total_modelos} modelos distintos atendidos`;
+
+  // Renderizar Top Aeronaves Coordenadas
+  const modelsContainer = document.getElementById('spotlightModelsList');
+  modelsContainer.innerHTML = '';
+  op.modelos_top.forEach(m => {
+    const item = document.createElement('div');
+    item.className = 'model-bar-item';
+    item.innerHTML = `
+      <div class="model-bar-header">
+        <span>${m.modelo}</span>
+        <span style="color: var(--accent-cyan);">${m.total.toLocaleString('pt-BR')} (${m.pct}%)</span>
+      </div>
+      <div class="model-progress-bg">
+        <div class="model-progress-fill" style="width: ${Math.min(m.pct * 2.5, 100)}%;"></div>
+      </div>
+    `;
+    modelsContainer.appendChild(item);
+  });
+
+  // Diagnóstico Narrativo Automatizado do Controlador
+  let diag = `O controlador <strong>${op.operador}</strong> ocupa a <strong>${op.ranking}ª posição na escala histórica</strong> da TWR SBSJ, tendo gerenciado <strong>${op.total.toLocaleString('pt-BR')} movimentos em console</strong> (${op.pct}% de toda a base histórica). `;
+  diag += `Esteve em atividade na escala do aeródromo no período de <strong>${op.periodo_ativo || 'múltiplos anos'}</strong>, com maior densidade de serviço no <strong>${op.turno_predominante || 'período vespertino'}</strong> (${op.pct_turno || 0}% de seus registros). `;
+  if (op.pct_tgl > 25) {
+    diag += `Apresenta expressiva carga de trabalho na <em>coordenação de voos de instrução no circuito de tráfego visual</em>, com <strong>${op.pct_tgl}% das operações sob sua fonia correspondendo a toques e arremetidas (TGL)</strong>. `;
+  } else {
+    diag += `Coordenou predominantemente <em>operações em rota, partidas e chegadas</em> no espaço aéreo terminal. `;
+  }
+  diag += `Sob sua vigilância e autorizações de controle, foram coordenadas <strong>${op.total_aeronaves.toLocaleString('pt-BR')} aeronaves distintas</strong> de <strong>${op.total_modelos} modelos aeronáuticos</strong>.`;
+  document.getElementById('spotlightSummary').innerHTML = diag;
+}
+
+function initOperatorCharts() {
+  if (!globalData || !globalData.operadores_ranking) return;
+
+  // 1. Gráfico Ranking Top 15 Controladores
+  const ctxOpRanking = document.getElementById('chartOpRanking').getContext('2d');
+  const top15 = globalData.operadores_ranking.slice(0, 15);
+  charts.opRanking = new Chart(ctxOpRanking, {
+    type: 'bar',
+    data: {
+      labels: top15.map(o => `#${o.ranking} ${o.operador}`),
+      datasets: [{
+        label: 'Movimentos no Console',
+        data: top15.map(o => o.total),
+        backgroundColor: '#06b6d4',
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) {
+              const op = top15[ctx.dataIndex];
+              return ` ${ctx.raw.toLocaleString('pt-BR')} movimentos (${op.pct}% do volume da torre)`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: getGridColor() }, ticks: { color: getTextColor() } },
+        y: { grid: { display: false }, ticks: { color: getTextColor(), font: { family: 'monospace', weight: 'bold' } } }
+      }
+    }
+  });
+
+  // 2. Gráfico Evolução Temporal dos Top 5 Controladores
+  const ctxOpEvol = document.getElementById('chartOpEvolucao').getContext('2d');
+  const evolData = globalData.operadores_evolucao_anual;
+  const colorsTop5 = ['#06b6d4', '#f59e0b', '#6366f1', '#10b981', '#f43f5e'];
+  const datasetsEvol = Object.keys(evolData.series).map((op, idx) => ({
+    label: `Controlador ${op}`,
+    data: evolData.series[op],
+    borderColor: colorsTop5[idx % colorsTop5.length],
+    backgroundColor: colorsTop5[idx % colorsTop5.length],
+    borderWidth: 2.5,
+    tension: 0.3,
+    pointRadius: 3
+  }));
+
+  charts.opEvolucao = new Chart(ctxOpEvol, {
+    type: 'line',
+    data: {
+      labels: evolData.anos,
+      datasets: datasetsEvol
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { color: getTextColor(), boxWidth: 12 } }
+      },
+      scales: {
+        x: { grid: { color: getGridColor() }, ticks: { color: getTextColor() } },
+        y: { grid: { color: getGridColor() }, ticks: { color: getTextColor() } }
+      }
+    }
+  });
+
+  // 3. Gráfico Mix de Categorias Coordenadas (Top 10)
+  const ctxOpFrotas = document.getElementById('chartOpFrotas').getContext('2d');
+  const frotasData = globalData.operadores_frotas_top10;
+  const coresCat = {
+    'Treinamento / Monomotor': '#06b6d4',
+    'Helicóptero': '#f59e0b',
+    'Turboélice / Regional': '#10b981',
+    'Jato (Executivo / Comercial)': '#6366f1',
+    'Bimotor Pistão': '#ec4899',
+    'Outros / Especiais': '#64748b'
+  };
+
+  const datasetsFrotas = Object.keys(frotasData.categorias).map(cat => ({
+    label: cat,
+    data: frotasData.categorias[cat],
+    backgroundColor: coresCat[cat] || '#94a3b8'
+  }));
+
+  charts.opFrotas = new Chart(ctxOpFrotas, {
+    type: 'bar',
+    data: {
+      labels: frotasData.operadores,
+      datasets: datasetsFrotas
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { stacked: true, grid: { color: getGridColor() }, ticks: { color: getTextColor() } },
+        y: { stacked: true, grid: { color: getGridColor() }, ticks: { color: getTextColor() } }
+      },
+      plugins: {
+        legend: { labels: { color: getTextColor(), boxWidth: 10, font: { size: 10 } } }
+      }
+    }
+  });
+
+  // 4. Gráfico Tipos de Tráfego Gerenciados (Top 10)
+  const ctxOpMissoes = document.getElementById('chartOpMissoes').getContext('2d');
+  const missoesData = globalData.operadores_missoes_top10;
+  const coresMissoes = {
+    'Aviação Geral / Civil': '#3b82f6',
+    'Militar': '#10b981',
+    'Comercial Regular': '#f59e0b',
+    'Experimental': '#ec4899',
+    'Não Regular': '#8b5cf6'
+  };
+
+  const datasetsMissoes = Object.keys(missoesData.missoes).map(m => ({
+    label: m,
+    data: missoesData.missoes[m],
+    backgroundColor: coresMissoes[m] || '#06b6d4'
+  }));
+
+  charts.opMissoes = new Chart(ctxOpMissoes, {
+    type: 'bar',
+    data: {
+      labels: missoesData.operadores,
+      datasets: datasetsMissoes
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { stacked: true, grid: { color: getGridColor() }, ticks: { color: getTextColor() } },
+        y: { stacked: true, grid: { color: getGridColor() }, ticks: { color: getTextColor() } }
+      },
+      plugins: {
+        legend: { labels: { color: getTextColor(), boxWidth: 10, font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+function setupOperatorTableEvents() {
+  const searchInput = document.getElementById('opTableSearchInput');
+  searchInput.addEventListener('input', () => {
+    const term = searchInput.value.toLowerCase().trim();
+    if (!term) {
+      filteredOperatorsList = [...globalData.operadores_ranking];
+    } else {
+      filteredOperatorsList = globalData.operadores_ranking.filter(o => 
+        o.operador.toLowerCase().includes(term) ||
+        (o.turno_predominante && o.turno_predominante.toLowerCase().includes(term)) ||
+        o.categoria_predominante.toLowerCase().includes(term) ||
+        o.tv_predominante.toLowerCase().includes(term) ||
+        (o.modelos_top[0] && o.modelos_top[0].modelo.toLowerCase().includes(term))
+      );
+    }
+    opTableCurrentPage = 1;
+    renderOperatorTable();
+  });
+
+  document.getElementById('btnPrevOpPage').addEventListener('click', () => {
+    if (opTableCurrentPage > 1) {
+      opTableCurrentPage--;
+      renderOperatorTable();
+    }
+  });
+
+  document.getElementById('btnNextOpPage').addEventListener('click', () => {
+    const maxPage = Math.ceil(filteredOperatorsList.length / OP_TABLE_PAGE_SIZE);
+    if (opTableCurrentPage < maxPage) {
+      opTableCurrentPage++;
+      renderOperatorTable();
+    }
+  });
+}
+
+function renderOperatorTable() {
+  const tbody = document.getElementById('opTableBody');
+  const info = document.getElementById('opTableInfo');
+  const btnPrev = document.getElementById('btnPrevOpPage');
+  const btnNext = document.getElementById('btnNextOpPage');
+
+  tbody.innerHTML = '';
+  const total = filteredOperatorsList.length;
+  const maxPage = Math.ceil(total / OP_TABLE_PAGE_SIZE) || 1;
+  const start = (opTableCurrentPage - 1) * OP_TABLE_PAGE_SIZE;
+  const pageItems = filteredOperatorsList.slice(start, start + OP_TABLE_PAGE_SIZE);
+
+  info.textContent = `Exibindo ${pageItems.length ? start + 1 : 0} a ${Math.min(start + OP_TABLE_PAGE_SIZE, total)} de ${total} controladores (Página ${opTableCurrentPage} de ${maxPage})`;
+  btnPrev.disabled = opTableCurrentPage <= 1;
+  btnNext.disabled = opTableCurrentPage >= maxPage;
+
+  if (pageItems.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; padding: 2rem; color: var(--text-muted);">Nenhum controlador encontrado com este termo.</td></tr>';
+    return;
+  }
+
+  pageItems.forEach(o => {
+    const tr = document.createElement('tr');
+    const topModStr = o.modelos_top[0] ? `${o.modelos_top[0].modelo} (${o.modelos_top[0].pct}%)` : '-';
+    tr.innerHTML = `
+      <td style="font-weight: 700; color: var(--accent-amber);">#${o.ranking}</td>
+      <td><span class="badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); font-size: 0.85rem;"><i class="fa-solid fa-headset" style="font-size: 0.72rem; margin-right: 4px;"></i>${o.operador}</span></td>
+      <td style="font-weight: 600;">${o.total.toLocaleString('pt-BR')}</td>
+      <td><span style="color: var(--accent-indigo); font-weight: 600;">${o.pct}%</span></td>
+      <td style="font-size: 0.82rem;">${o.periodo_ativo || '-'}</td>
+      <td><span class="badge" style="background: rgba(255, 255, 255, 0.08); font-size: 0.75rem;">${o.turno_predominante || '-'}</span></td>
+      <td>${topModStr}</td>
+      <td>${o.pct_tgl}%</td>
+      <td>${o.total_aeronaves.toLocaleString('pt-BR')}</td>
+      <td>
+        <button class="btn-inspect-op" data-code="${o.operador}">
+          <i class="fa-solid fa-magnifying-glass-chart"></i> Raio-X
+        </button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  // Eventos dos botões "Raio-X" na tabela
+  tbody.querySelectorAll('.btn-inspect-op').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const opCode = btn.getAttribute('data-code');
+      const select = document.getElementById('selectOperadorSpotlight');
+      select.value = opCode;
+      updateOperatorSpotlight(opCode);
+      document.getElementById('operatorSpotlightCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 }

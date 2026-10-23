@@ -156,11 +156,122 @@ top_modelos['categoria'] = top_modelos['tipo'].apply(categorizar_aeronave)
 top_modelos['pct'] = (top_modelos['total'] / total_movimentos * 100).round(2)
 top_modelos = top_modelos.to_dict(orient='records')
 
-# 10. Top 15 Operadores
-top_operadores = df['operador'].value_counts().head(15).reset_index()
-top_operadores.columns = ['operador', 'total']
-top_operadores['pct'] = (top_operadores['total'] / total_movimentos * 100).round(2)
-top_operadores = top_operadores.to_dict(orient='records')
+# 10. Análise de Controladores de Tráfego Aéreo / Operadores de Console (TWR SBSJ / FAB)
+def calc_turno(h):
+    if h < 12: return 'Matutino (06h-12h)'
+    elif h < 18: return 'Vespertino (12h-18h)'
+    else: return 'Noturno (18h-06h)'
+
+df['turno'] = df['hora_local'].apply(calc_turno)
+
+op_counts = df['operador'].value_counts()
+total_ops_unicos = int(len(op_counts))
+top1_codigo = str(op_counts.index[0])
+top1_voos = int(op_counts.iloc[0])
+top1_pct = round((top1_voos / total_movimentos) * 100, 2)
+concentracao_top10 = round((op_counts.head(10).sum() / total_movimentos) * 100, 2)
+concentracao_top20 = round((op_counts.head(20).sum() / total_movimentos) * 100, 2)
+media_por_op = round(total_movimentos / total_ops_unicos, 1)
+
+kpis_operadores = {
+    "total_operadores": total_ops_unicos,
+    "top1_operador": top1_codigo,
+    "top1_voos": top1_voos,
+    "top1_pct": top1_pct,
+    "concentracao_top10": concentracao_top10,
+    "concentracao_top20": concentracao_top20,
+    "media_por_operador": media_por_op
+}
+
+# Ranking e Ficha dos 101 Controladores de Tráfego Aéreo
+operadores_ranking = []
+for rank, (op_code, op_count) in enumerate(op_counts.items(), 1):
+    sub = df[df['operador'] == op_code]
+    top_mod = [
+        {"modelo": str(m), "total": int(c), "pct": round(c / op_count * 100, 1)}
+        for m, c in sub['tipo'].value_counts().head(3).items()
+    ]
+    top_cat = str(sub['categoria_aero'].value_counts().index[0])
+    pct_tgl = round((sub['operacao'] == 'TGL').sum() / op_count * 100, 1)
+    top_tv_code = sub['tv'].value_counts().index[0]
+    top_tv_desc = tv_map.get(top_tv_code, 'Outro')
+    pct_local = round(((sub['proced'] == 'SBSJ') & (sub['dest'] == 'SBSJ')).sum() / op_count * 100, 1)
+
+    # Análise de Escala e Turnos
+    anos_op = sorted(sub['ano'].unique().tolist())
+    periodo_ativo = f"{min(anos_op)} - {max(anos_op)} ({len(anos_op)} anos)"
+    turno_counts = sub['turno'].value_counts()
+    turno_pred = turno_counts.index[0]
+    pct_turno = round(turno_counts.iloc[0] / op_count * 100, 1)
+
+    rotas_ext = sub[sub['dest'] != sub['proced']]
+    if len(rotas_ext) > 0:
+        top_ext_counts = (rotas_ext['proced'] + ' -> ' + rotas_ext['dest']).value_counts().head(3)
+        top_ext = [{"rota": r, "total": int(c)} for r, c in top_ext_counts.items()]
+    else:
+        top_ext = []
+
+    operadores_ranking.append({
+        "ranking": rank,
+        "operador": str(op_code),
+        "total": int(op_count),
+        "pct": round((op_count / total_movimentos) * 100, 2),
+        "modelos_top": top_mod,
+        "categoria_predominante": top_cat,
+        "pct_tgl": pct_tgl,
+        "tv_predominante": top_tv_desc,
+        "pct_local": pct_local,
+        "rotas_externas": top_ext,
+        "total_aeronaves": int(sub['identificacao'].nunique()),
+        "total_modelos": int(sub['tipo'].nunique()),
+        "periodo_ativo": periodo_ativo,
+        "anos_servico_qtd": len(anos_op),
+        "turno_predominante": turno_pred,
+        "pct_turno": pct_turno
+    })
+
+# Evolução Anual dos Top 5 Operadores
+top5_ops = op_counts.head(5).index.tolist()
+anos_unicos = sorted(df['ano'].unique().tolist())
+operadores_evolucao_anual = {
+    "anos": [int(a) for a in anos_unicos],
+    "series": {}
+}
+for op in top5_ops:
+    sub = df[df['operador'] == op]
+    cnt_ano = sub.groupby('ano').size().to_dict()
+    operadores_evolucao_anual["series"][str(op)] = [int(cnt_ano.get(a, 0)) for a in anos_unicos]
+
+# Composição de Frota dos Top 10 Operadores
+top10_ops = [str(x) for x in op_counts.head(10).index.tolist()]
+categorias_frota = ['Treinamento / Monomotor', 'Helicóptero', 'Turboélice / Regional', 'Jato (Executivo / Comercial)', 'Bimotor Pistão', 'Outros / Especiais']
+operadores_frotas_top10 = {
+    "operadores": top10_ops,
+    "categorias": {}
+}
+for cat in categorias_frota:
+    operadores_frotas_top10["categorias"][cat] = [
+        int(((df['operador'] == op) & (df['categoria_aero'] == cat)).sum())
+        for op in top10_ops
+    ]
+
+# Distribuição de Missões / Tipos de Voo dos Top 10 Operadores
+missoes_codigos = ['G', 'M', 'S', 'X', 'N']
+operadores_missoes_top10 = {
+    "operadores": top10_ops,
+    "missoes": {}
+}
+for m_code in missoes_codigos:
+    m_nome = tv_map.get(m_code, m_code)
+    operadores_missoes_top10["missoes"][m_nome] = [
+        int(((df['operador'] == op) & (df['tv'] == m_code)).sum())
+        for op in top10_ops
+    ]
+
+top_operadores = [
+    {"operador": r['operador'], "total": r['total'], "pct": r['pct']}
+    for r in operadores_ranking[:15]
+]
 
 # 11. Top Rotas Inter-aeroportos (dest != proced)
 rotas = df[df['dest'] != df['proced']].groupby(['proced', 'dest']).size().reset_index(name='total')
@@ -343,6 +454,11 @@ output = {
     "categorias_aero": categorias_dist,
     "top_modelos": top_modelos,
     "top_operadores": top_operadores,
+    "kpis_operadores": kpis_operadores,
+    "operadores_ranking": operadores_ranking,
+    "operadores_evolucao_anual": operadores_evolucao_anual,
+    "operadores_frotas_top10": operadores_frotas_top10,
+    "operadores_missoes_top10": operadores_missoes_top10,
     "top_rotas": rotas,
     "pistas": pistas_dist,
     "regras_mineracao": rules,

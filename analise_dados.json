@@ -941,6 +941,4971 @@
       "pct": 2.34
     }
   ],
+  "kpis_operadores": {
+    "total_operadores": 101,
+    "top1_operador": "YSJH",
+    "top1_voos": 18360,
+    "top1_pct": 5.38,
+    "concentracao_top10": 37.47,
+    "concentracao_top20": 61.87,
+    "media_por_operador": 3380.9
+  },
+  "operadores_ranking": [
+    {
+      "ranking": 1,
+      "operador": "YSJH",
+      "total": 18360,
+      "pct": 5.38,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 2597,
+          "pct": 14.1
+        },
+        {
+          "modelo": "C152",
+          "total": 1690,
+          "pct": 9.2
+        },
+        {
+          "modelo": "MC01",
+          "total": 1292,
+          "pct": 7.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 30.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 51.5,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 151
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 145
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 141
+        }
+      ],
+      "total_aeronaves": 2371,
+      "total_modelos": 275,
+      "periodo_ativo": "2015 - 2026 (12 anos)",
+      "anos_servico_qtd": 12,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.4
+    },
+    {
+      "ranking": 2,
+      "operador": "HSIE",
+      "total": 15582,
+      "pct": 4.56,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 2354,
+          "pct": 15.1
+        },
+        {
+          "modelo": "C152",
+          "total": 1384,
+          "pct": 8.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 921,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 34.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.4,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 132
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 123
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 104
+        }
+      ],
+      "total_aeronaves": 1890,
+      "total_modelos": 262,
+      "periodo_ativo": "2016 - 2024 (9 anos)",
+      "anos_servico_qtd": 9,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 57.5
+    },
+    {
+      "ranking": 3,
+      "operador": "IPTK",
+      "total": 14940,
+      "pct": 4.38,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 2233,
+          "pct": 14.9
+        },
+        {
+          "modelo": "C152",
+          "total": 1305,
+          "pct": 8.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 926,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.3,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 141
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 134
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 127
+        }
+      ],
+      "total_aeronaves": 1976,
+      "total_modelos": 247,
+      "periodo_ativo": "2015 - 2023 (9 anos)",
+      "anos_servico_qtd": 9,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.4
+    },
+    {
+      "ranking": 4,
+      "operador": "DZEL",
+      "total": 13408,
+      "pct": 3.93,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 2203,
+          "pct": 16.4
+        },
+        {
+          "modelo": "C152",
+          "total": 1058,
+          "pct": 7.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 777,
+          "pct": 5.8
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 51.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 106
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 104
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 93
+        }
+      ],
+      "total_aeronaves": 1820,
+      "total_modelos": 259,
+      "periodo_ativo": "2015 - 2023 (9 anos)",
+      "anos_servico_qtd": 9,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 46.5
+    },
+    {
+      "ranking": 5,
+      "operador": "EAFM",
+      "total": 12790,
+      "pct": 3.75,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 2406,
+          "pct": 18.8
+        },
+        {
+          "modelo": "MC01",
+          "total": 1421,
+          "pct": 11.1
+        },
+        {
+          "modelo": "C152",
+          "total": 1195,
+          "pct": 9.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 106
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 87
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 82
+        }
+      ],
+      "total_aeronaves": 1421,
+      "total_modelos": 200,
+      "periodo_ativo": "2020 - 2025 (6 anos)",
+      "anos_servico_qtd": 6,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.3
+    },
+    {
+      "ranking": 6,
+      "operador": "WJKQ",
+      "total": 10819,
+      "pct": 3.17,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1516,
+          "pct": 14.0
+        },
+        {
+          "modelo": "C152",
+          "total": 862,
+          "pct": 8.0
+        },
+        {
+          "modelo": "P28A",
+          "total": 647,
+          "pct": 6.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 28.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.1,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 102
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 93
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 93
+        }
+      ],
+      "total_aeronaves": 1661,
+      "total_modelos": 247,
+      "periodo_ativo": "2016 - 2025 (10 anos)",
+      "anos_servico_qtd": 10,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 46.7
+    },
+    {
+      "ranking": 7,
+      "operador": "RMOU",
+      "total": 10802,
+      "pct": 3.16,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1775,
+          "pct": 16.4
+        },
+        {
+          "modelo": "C152",
+          "total": 870,
+          "pct": 8.1
+        },
+        {
+          "modelo": "P28A",
+          "total": 609,
+          "pct": 5.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 48.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 121
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 101
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 88
+        }
+      ],
+      "total_aeronaves": 1601,
+      "total_modelos": 227,
+      "periodo_ativo": "2015 - 2022 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.6
+    },
+    {
+      "ranking": 8,
+      "operador": "MDUF",
+      "total": 10589,
+      "pct": 3.1,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1915,
+          "pct": 18.1
+        },
+        {
+          "modelo": "C152",
+          "total": 875,
+          "pct": 8.3
+        },
+        {
+          "modelo": "MC01",
+          "total": 807,
+          "pct": 7.6
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 28.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 52.9,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 88
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 87
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 64
+        }
+      ],
+      "total_aeronaves": 1471,
+      "total_modelos": 223,
+      "periodo_ativo": "2020 - 2026 (7 anos)",
+      "anos_servico_qtd": 7,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.4
+    },
+    {
+      "ranking": 9,
+      "operador": "IWDG",
+      "total": 10332,
+      "pct": 3.03,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1735,
+          "pct": 16.8
+        },
+        {
+          "modelo": "C152",
+          "total": 836,
+          "pct": 8.1
+        },
+        {
+          "modelo": "P28A",
+          "total": 634,
+          "pct": 6.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 31.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 50.1,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 89
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 79
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 78
+        }
+      ],
+      "total_aeronaves": 1470,
+      "total_modelos": 225,
+      "periodo_ativo": "2017 - 2024 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 56.3
+    },
+    {
+      "ranking": 10,
+      "operador": "YXPJ",
+      "total": 10311,
+      "pct": 3.02,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1752,
+          "pct": 17.0
+        },
+        {
+          "modelo": "MC01",
+          "total": 876,
+          "pct": 8.5
+        },
+        {
+          "modelo": "C152",
+          "total": 810,
+          "pct": 7.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 31.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 53.0,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 108
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 107
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 72
+        }
+      ],
+      "total_aeronaves": 1412,
+      "total_modelos": 210,
+      "periodo_ativo": "2019 - 2025 (7 anos)",
+      "anos_servico_qtd": 7,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 51.2
+    },
+    {
+      "ranking": 11,
+      "operador": "XMDN",
+      "total": 10288,
+      "pct": 3.01,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1378,
+          "pct": 13.4
+        },
+        {
+          "modelo": "C152",
+          "total": 873,
+          "pct": 8.5
+        },
+        {
+          "modelo": "P28A",
+          "total": 568,
+          "pct": 5.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 32.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.0,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 90
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 86
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 83
+        }
+      ],
+      "total_aeronaves": 1613,
+      "total_modelos": 247,
+      "periodo_ativo": "2016 - 2026 (11 anos)",
+      "anos_servico_qtd": 11,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 47.1
+    },
+    {
+      "ranking": 12,
+      "operador": "YMOG",
+      "total": 9790,
+      "pct": 2.87,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 907,
+          "pct": 9.3
+        },
+        {
+          "modelo": "C152",
+          "total": 764,
+          "pct": 7.8
+        },
+        {
+          "modelo": "P28A",
+          "total": 561,
+          "pct": 5.7
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 32.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 45.1,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 124
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 104
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 104
+        }
+      ],
+      "total_aeronaves": 1466,
+      "total_modelos": 235,
+      "periodo_ativo": "2015 - 2020 (6 anos)",
+      "anos_servico_qtd": 6,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 48.9
+    },
+    {
+      "ranking": 13,
+      "operador": "ESUN",
+      "total": 9749,
+      "pct": 2.86,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1542,
+          "pct": 15.8
+        },
+        {
+          "modelo": "C152",
+          "total": 693,
+          "pct": 7.1
+        },
+        {
+          "modelo": "P28A",
+          "total": 589,
+          "pct": 6.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 32.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 50.6,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 108
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 106
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 90
+        }
+      ],
+      "total_aeronaves": 1542,
+      "total_modelos": 224,
+      "periodo_ativo": "2015 - 2024 (10 anos)",
+      "anos_servico_qtd": 10,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 62.0
+    },
+    {
+      "ranking": 14,
+      "operador": "FHWD",
+      "total": 9147,
+      "pct": 2.68,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1680,
+          "pct": 18.4
+        },
+        {
+          "modelo": "C152",
+          "total": 703,
+          "pct": 7.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 432,
+          "pct": 4.7
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 51.7,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 102
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 67
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 64
+        }
+      ],
+      "total_aeronaves": 1311,
+      "total_modelos": 208,
+      "periodo_ativo": "2017 - 2024 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 54.5
+    },
+    {
+      "ranking": 15,
+      "operador": "HDAX",
+      "total": 7976,
+      "pct": 2.34,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 826,
+          "pct": 10.4
+        },
+        {
+          "modelo": "C152",
+          "total": 682,
+          "pct": 8.6
+        },
+        {
+          "modelo": "AS50",
+          "total": 525,
+          "pct": 6.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 43.7,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 85
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 83
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 78
+        }
+      ],
+      "total_aeronaves": 1359,
+      "total_modelos": 211,
+      "periodo_ativo": "2015 - 2022 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 46.8
+    },
+    {
+      "ranking": 16,
+      "operador": "LGWH",
+      "total": 7627,
+      "pct": 2.23,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1167,
+          "pct": 15.3
+        },
+        {
+          "modelo": "MC01",
+          "total": 996,
+          "pct": 13.1
+        },
+        {
+          "modelo": "C152",
+          "total": 722,
+          "pct": 9.5
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 29.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 55.1,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 67
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 61
+        },
+        {
+          "rota": "SJCI -> ZZZZ",
+          "total": 57
+        }
+      ],
+      "total_aeronaves": 1102,
+      "total_modelos": 179,
+      "periodo_ativo": "2022 - 2026 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 48.7
+    },
+    {
+      "ranking": 17,
+      "operador": "UTIG",
+      "total": 7521,
+      "pct": 2.2,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1274,
+          "pct": 16.9
+        },
+        {
+          "modelo": "C152",
+          "total": 655,
+          "pct": 8.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 424,
+          "pct": 5.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 34.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 50.5,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 60
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 56
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 50
+        }
+      ],
+      "total_aeronaves": 1254,
+      "total_modelos": 210,
+      "periodo_ativo": "2015 - 2022 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.3
+    },
+    {
+      "ranking": 18,
+      "operador": "WXAQ",
+      "total": 7431,
+      "pct": 2.18,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1290,
+          "pct": 17.4
+        },
+        {
+          "modelo": "C152",
+          "total": 566,
+          "pct": 7.6
+        },
+        {
+          "modelo": "AS50",
+          "total": 415,
+          "pct": 5.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 33.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 47.7,
+      "rotas_externas": [
+        {
+          "rota": "SBBR -> SBSJ",
+          "total": 65
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 64
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 60
+        }
+      ],
+      "total_aeronaves": 1236,
+      "total_modelos": 206,
+      "periodo_ativo": "2015 - 2022 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.9
+    },
+    {
+      "ranking": 19,
+      "operador": "UWHR",
+      "total": 7141,
+      "pct": 2.09,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1323,
+          "pct": 18.5
+        },
+        {
+          "modelo": "MC01",
+          "total": 860,
+          "pct": 12.0
+        },
+        {
+          "modelo": "C152",
+          "total": 736,
+          "pct": 10.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 35.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 59.2,
+      "rotas_externas": [
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 64
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 52
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 47
+        }
+      ],
+      "total_aeronaves": 902,
+      "total_modelos": 157,
+      "periodo_ativo": "2022 - 2025 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 65.7
+    },
+    {
+      "ranking": 20,
+      "operador": "XQZW",
+      "total": 6655,
+      "pct": 1.95,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 1271,
+          "pct": 19.1
+        },
+        {
+          "modelo": "C150",
+          "total": 836,
+          "pct": 12.6
+        },
+        {
+          "modelo": "C152",
+          "total": 670,
+          "pct": 10.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 31.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.4,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 99
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 98
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 53
+        }
+      ],
+      "total_aeronaves": 932,
+      "total_modelos": 153,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 54.6
+    },
+    {
+      "ranking": 21,
+      "operador": "CADR",
+      "total": 6513,
+      "pct": 1.91,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 1245,
+          "pct": 19.1
+        },
+        {
+          "modelo": "MC01",
+          "total": 666,
+          "pct": 10.2
+        },
+        {
+          "modelo": "C152",
+          "total": 562,
+          "pct": 8.6
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 34.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 54
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 46
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 44
+        }
+      ],
+      "total_aeronaves": 926,
+      "total_modelos": 152,
+      "periodo_ativo": "2022 - 2026 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.8
+    },
+    {
+      "ranking": 22,
+      "operador": "FJNL",
+      "total": 6277,
+      "pct": 1.84,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 683,
+          "pct": 10.9
+        },
+        {
+          "modelo": "C152",
+          "total": 448,
+          "pct": 7.1
+        },
+        {
+          "modelo": "E110",
+          "total": 321,
+          "pct": 5.1
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 34.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 47.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 78
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 77
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 67
+        }
+      ],
+      "total_aeronaves": 1165,
+      "total_modelos": 196,
+      "periodo_ativo": "2017 - 2024 (8 anos)",
+      "anos_servico_qtd": 8,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 52.6
+    },
+    {
+      "ranking": 23,
+      "operador": "ZBMY",
+      "total": 6270,
+      "pct": 1.84,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 534,
+          "pct": 8.5
+        },
+        {
+          "modelo": "C150",
+          "total": 489,
+          "pct": 7.8
+        },
+        {
+          "modelo": "AS50",
+          "total": 371,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.7,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 44.3,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 78
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 75
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 73
+        }
+      ],
+      "total_aeronaves": 1138,
+      "total_modelos": 191,
+      "periodo_ativo": "2015 - 2019 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 51.6
+    },
+    {
+      "ranking": 24,
+      "operador": "TFHP",
+      "total": 5102,
+      "pct": 1.49,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 879,
+          "pct": 17.2
+        },
+        {
+          "modelo": "C152",
+          "total": 501,
+          "pct": 9.8
+        },
+        {
+          "modelo": "C150",
+          "total": 476,
+          "pct": 9.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 28.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 52.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 60
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 58
+        },
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 44
+        }
+      ],
+      "total_aeronaves": 809,
+      "total_modelos": 150,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.3
+    },
+    {
+      "ranking": 25,
+      "operador": "BIJE",
+      "total": 4936,
+      "pct": 1.45,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 524,
+          "pct": 10.6
+        },
+        {
+          "modelo": "C152",
+          "total": 341,
+          "pct": 6.9
+        },
+        {
+          "modelo": "AS50",
+          "total": 318,
+          "pct": 6.4
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 42.4,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 60
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 57
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 44
+        }
+      ],
+      "total_aeronaves": 996,
+      "total_modelos": 180,
+      "periodo_ativo": "2015 - 2021 (7 anos)",
+      "anos_servico_qtd": 7,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.9
+    },
+    {
+      "ranking": 26,
+      "operador": "OLAE",
+      "total": 4883,
+      "pct": 1.43,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 494,
+          "pct": 10.1
+        },
+        {
+          "modelo": "C150",
+          "total": 484,
+          "pct": 9.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 251,
+          "pct": 5.1
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 32.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 47.5,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 54
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 51
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 49
+        }
+      ],
+      "total_aeronaves": 939,
+      "total_modelos": 174,
+      "periodo_ativo": "2015 - 2020 (6 anos)",
+      "anos_servico_qtd": 6,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 45.2
+    },
+    {
+      "ranking": 27,
+      "operador": "DHMO",
+      "total": 4525,
+      "pct": 1.33,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 519,
+          "pct": 11.5
+        },
+        {
+          "modelo": "C152",
+          "total": 448,
+          "pct": 9.9
+        },
+        {
+          "modelo": "E110",
+          "total": 212,
+          "pct": 4.7
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 33.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 47.8,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 75
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 59
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 48
+        }
+      ],
+      "total_aeronaves": 886,
+      "total_modelos": 175,
+      "periodo_ativo": "2015 - 2019 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 56.5
+    },
+    {
+      "ranking": 28,
+      "operador": "RTQO",
+      "total": 4000,
+      "pct": 1.17,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 577,
+          "pct": 14.4
+        },
+        {
+          "modelo": "P28A",
+          "total": 281,
+          "pct": 7.0
+        },
+        {
+          "modelo": "AS50",
+          "total": 246,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.5,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 40
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 37
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 32
+        }
+      ],
+      "total_aeronaves": 830,
+      "total_modelos": 162,
+      "periodo_ativo": "2017 - 2026 (9 anos)",
+      "anos_servico_qtd": 9,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 56.9
+    },
+    {
+      "ranking": 29,
+      "operador": "ZMHE",
+      "total": 3803,
+      "pct": 1.11,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 400,
+          "pct": 10.5
+        },
+        {
+          "modelo": "C152",
+          "total": 248,
+          "pct": 6.5
+        },
+        {
+          "modelo": "AS50",
+          "total": 244,
+          "pct": 6.4
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 28.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 42.6,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 60
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 56
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 51
+        }
+      ],
+      "total_aeronaves": 865,
+      "total_modelos": 173,
+      "periodo_ativo": "2016 - 2025 (10 anos)",
+      "anos_servico_qtd": 10,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 51.6
+    },
+    {
+      "ranking": 30,
+      "operador": "HYZC",
+      "total": 3703,
+      "pct": 1.08,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 264,
+          "pct": 7.1
+        },
+        {
+          "modelo": "C152",
+          "total": 218,
+          "pct": 5.9
+        },
+        {
+          "modelo": "E110",
+          "total": 217,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 24.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 40.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 60
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 55
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 54
+        }
+      ],
+      "total_aeronaves": 790,
+      "total_modelos": 173,
+      "periodo_ativo": "2016 - 2020 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.8
+    },
+    {
+      "ranking": 31,
+      "operador": "BRUQ",
+      "total": 3560,
+      "pct": 1.04,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 679,
+          "pct": 19.1
+        },
+        {
+          "modelo": "C150",
+          "total": 418,
+          "pct": 11.7
+        },
+        {
+          "modelo": "C152",
+          "total": 370,
+          "pct": 10.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 26.7,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 59.2,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 64
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 59
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 28
+        }
+      ],
+      "total_aeronaves": 597,
+      "total_modelos": 132,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.6
+    },
+    {
+      "ranking": 32,
+      "operador": "CIBH",
+      "total": 3534,
+      "pct": 1.03,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 723,
+          "pct": 20.5
+        },
+        {
+          "modelo": "C152",
+          "total": 449,
+          "pct": 12.7
+        },
+        {
+          "modelo": "C150",
+          "total": 301,
+          "pct": 8.5
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.6,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 54
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 47
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 27
+        }
+      ],
+      "total_aeronaves": 580,
+      "total_modelos": 129,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 54.3
+    },
+    {
+      "ranking": 33,
+      "operador": "DTOA",
+      "total": 3349,
+      "pct": 0.98,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 522,
+          "pct": 15.6
+        },
+        {
+          "modelo": "C150",
+          "total": 401,
+          "pct": 12.0
+        },
+        {
+          "modelo": "C152",
+          "total": 299,
+          "pct": 8.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 27.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 55.3,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 42
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 35
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 30
+        }
+      ],
+      "total_aeronaves": 627,
+      "total_modelos": 133,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 56.2
+    },
+    {
+      "ranking": 34,
+      "operador": "BZIR",
+      "total": 3181,
+      "pct": 0.93,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 378,
+          "pct": 11.9
+        },
+        {
+          "modelo": "C152",
+          "total": 223,
+          "pct": 7.0
+        },
+        {
+          "modelo": "AS50",
+          "total": 196,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.7,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 43.3,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 35
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 33
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 32
+        }
+      ],
+      "total_aeronaves": 750,
+      "total_modelos": 161,
+      "periodo_ativo": "2015 - 2020 (6 anos)",
+      "anos_servico_qtd": 6,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.6
+    },
+    {
+      "ranking": 35,
+      "operador": "ZCGY",
+      "total": 2639,
+      "pct": 0.77,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 274,
+          "pct": 10.4
+        },
+        {
+          "modelo": "C152",
+          "total": 210,
+          "pct": 8.0
+        },
+        {
+          "modelo": "R44",
+          "total": 157,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 46.0,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 41
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 35
+        },
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 22
+        }
+      ],
+      "total_aeronaves": 622,
+      "total_modelos": 138,
+      "periodo_ativo": "2015 - 2017 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 56.3
+    },
+    {
+      "ranking": 36,
+      "operador": "EYKH",
+      "total": 2593,
+      "pct": 0.76,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 446,
+          "pct": 17.2
+        },
+        {
+          "modelo": "C150",
+          "total": 350,
+          "pct": 13.5
+        },
+        {
+          "modelo": "C152",
+          "total": 220,
+          "pct": 8.5
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 27
+        },
+        {
+          "rota": "SJCI -> ZZZZ",
+          "total": 27
+        },
+        {
+          "rota": "SDGS -> SJAD",
+          "total": 23
+        }
+      ],
+      "total_aeronaves": 520,
+      "total_modelos": 131,
+      "periodo_ativo": "2022 - 2026 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 65.1
+    },
+    {
+      "ranking": 37,
+      "operador": "MHRN",
+      "total": 2561,
+      "pct": 0.75,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 502,
+          "pct": 19.6
+        },
+        {
+          "modelo": "C150",
+          "total": 306,
+          "pct": 11.9
+        },
+        {
+          "modelo": "C152",
+          "total": 249,
+          "pct": 9.7
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 26.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 59.3,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 22
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 20
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 20
+        }
+      ],
+      "total_aeronaves": 495,
+      "total_modelos": 124,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 48.4
+    },
+    {
+      "ranking": 38,
+      "operador": "ONCB",
+      "total": 2535,
+      "pct": 0.74,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 244,
+          "pct": 9.6
+        },
+        {
+          "modelo": "E110",
+          "total": 168,
+          "pct": 6.6
+        },
+        {
+          "modelo": "AS50",
+          "total": 164,
+          "pct": 6.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 32.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 41.0,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 36
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 31
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 28
+        }
+      ],
+      "total_aeronaves": 639,
+      "total_modelos": 149,
+      "periodo_ativo": "2015 - 2019 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.2
+    },
+    {
+      "ranking": 39,
+      "operador": "COWQ",
+      "total": 2520,
+      "pct": 0.74,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 240,
+          "pct": 9.5
+        },
+        {
+          "modelo": "C150",
+          "total": 216,
+          "pct": 8.6
+        },
+        {
+          "modelo": "AS50",
+          "total": 140,
+          "pct": 5.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 34.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 44.7,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 40
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 37
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 29
+        }
+      ],
+      "total_aeronaves": 639,
+      "total_modelos": 145,
+      "periodo_ativo": "2015 - 2019 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 46.0
+    },
+    {
+      "ranking": 40,
+      "operador": "NRLZ",
+      "total": 2475,
+      "pct": 0.72,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 494,
+          "pct": 20.0
+        },
+        {
+          "modelo": "C150",
+          "total": 269,
+          "pct": 10.9
+        },
+        {
+          "modelo": "C152",
+          "total": 238,
+          "pct": 9.6
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 25.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.3,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 31
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 22
+        },
+        {
+          "rota": "SBSJ -> SBKP",
+          "total": 20
+        }
+      ],
+      "total_aeronaves": 516,
+      "total_modelos": 122,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 47.8
+    },
+    {
+      "ranking": 41,
+      "operador": "UCLW",
+      "total": 2456,
+      "pct": 0.72,
+      "modelos_top": [
+        {
+          "modelo": "AS50",
+          "total": 181,
+          "pct": 7.4
+        },
+        {
+          "modelo": "C152",
+          "total": 177,
+          "pct": 7.2
+        },
+        {
+          "modelo": "C150",
+          "total": 160,
+          "pct": 6.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 27.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 40.7,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 47
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 44
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 34
+        }
+      ],
+      "total_aeronaves": 619,
+      "total_modelos": 152,
+      "periodo_ativo": "2015 - 2021 (7 anos)",
+      "anos_servico_qtd": 7,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 65.3
+    },
+    {
+      "ranking": 42,
+      "operador": "AZTN",
+      "total": 2413,
+      "pct": 0.71,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 386,
+          "pct": 16.0
+        },
+        {
+          "modelo": "C150",
+          "total": 376,
+          "pct": 15.6
+        },
+        {
+          "modelo": "C152",
+          "total": 308,
+          "pct": 12.8
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 41.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 58.6,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 20
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 20
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 15
+        }
+      ],
+      "total_aeronaves": 455,
+      "total_modelos": 115,
+      "periodo_ativo": "2023 - 2026 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 64.4
+    },
+    {
+      "ranking": 43,
+      "operador": "REOK",
+      "total": 2388,
+      "pct": 0.7,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 328,
+          "pct": 13.7
+        },
+        {
+          "modelo": "C152",
+          "total": 160,
+          "pct": 6.7
+        },
+        {
+          "modelo": "AS50",
+          "total": 149,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 27.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 42.8,
+      "rotas_externas": [
+        {
+          "rota": "SJCI -> ZZZZ",
+          "total": 33
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 32
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 30
+        }
+      ],
+      "total_aeronaves": 558,
+      "total_modelos": 154,
+      "periodo_ativo": "2019 - 2023 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 51.2
+    },
+    {
+      "ranking": 44,
+      "operador": "DMES",
+      "total": 2388,
+      "pct": 0.7,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 391,
+          "pct": 16.4
+        },
+        {
+          "modelo": "C152",
+          "total": 239,
+          "pct": 10.0
+        },
+        {
+          "modelo": "C150",
+          "total": 209,
+          "pct": 8.8
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 29.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.7,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 24
+        },
+        {
+          "rota": "SJCI -> ZZZZ",
+          "total": 17
+        },
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 16
+        }
+      ],
+      "total_aeronaves": 465,
+      "total_modelos": 117,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 61.5
+    },
+    {
+      "ranking": 45,
+      "operador": "PGYE",
+      "total": 2353,
+      "pct": 0.69,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 394,
+          "pct": 16.7
+        },
+        {
+          "modelo": "C152",
+          "total": 215,
+          "pct": 9.1
+        },
+        {
+          "modelo": "MC01",
+          "total": 173,
+          "pct": 7.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 32.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 54.4,
+      "rotas_externas": [
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 19
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 18
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 17
+        }
+      ],
+      "total_aeronaves": 472,
+      "total_modelos": 116,
+      "periodo_ativo": "2022 - 2025 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 48.7
+    },
+    {
+      "ranking": 46,
+      "operador": "CDSB",
+      "total": 2118,
+      "pct": 0.62,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 194,
+          "pct": 9.2
+        },
+        {
+          "modelo": "AS50",
+          "total": 160,
+          "pct": 7.6
+        },
+        {
+          "modelo": "E110",
+          "total": 132,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 28.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 43.4,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 42
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 31
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 26
+        }
+      ],
+      "total_aeronaves": 577,
+      "total_modelos": 130,
+      "periodo_ativo": "2015 - 2019 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 58.1
+    },
+    {
+      "ranking": 47,
+      "operador": "YWED",
+      "total": 2112,
+      "pct": 0.62,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 364,
+          "pct": 17.2
+        },
+        {
+          "modelo": "C150",
+          "total": 230,
+          "pct": 10.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 200,
+          "pct": 9.5
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 27.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 51.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 30
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 26
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 18
+        }
+      ],
+      "total_aeronaves": 444,
+      "total_modelos": 109,
+      "periodo_ativo": "2024 - 2025 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.5
+    },
+    {
+      "ranking": 48,
+      "operador": "TPSH",
+      "total": 2077,
+      "pct": 0.61,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 319,
+          "pct": 15.4
+        },
+        {
+          "modelo": "C152",
+          "total": 237,
+          "pct": 11.4
+        },
+        {
+          "modelo": "C150",
+          "total": 231,
+          "pct": 11.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 22.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 54.8,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBYS",
+          "total": 28
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 26
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 23
+        }
+      ],
+      "total_aeronaves": 489,
+      "total_modelos": 108,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 48.3
+    },
+    {
+      "ranking": 49,
+      "operador": "PKAQ",
+      "total": 2031,
+      "pct": 0.59,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 476,
+          "pct": 23.4
+        },
+        {
+          "modelo": "MC01",
+          "total": 319,
+          "pct": 15.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 145,
+          "pct": 7.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 38.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 61.0,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 22
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 18
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 12
+        }
+      ],
+      "total_aeronaves": 349,
+      "total_modelos": 97,
+      "periodo_ativo": "2023 - 2024 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.5
+    },
+    {
+      "ranking": 50,
+      "operador": "DGWY",
+      "total": 1924,
+      "pct": 0.56,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 383,
+          "pct": 19.9
+        },
+        {
+          "modelo": "MC01",
+          "total": 238,
+          "pct": 12.4
+        },
+        {
+          "modelo": "C152",
+          "total": 181,
+          "pct": 9.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 60.7,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 20
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 13
+        },
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 12
+        }
+      ],
+      "total_aeronaves": 360,
+      "total_modelos": 109,
+      "periodo_ativo": "2022 - 2026 (5 anos)",
+      "anos_servico_qtd": 5,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 45.9
+    },
+    {
+      "ranking": 51,
+      "operador": "PHRL",
+      "total": 1785,
+      "pct": 0.52,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 387,
+          "pct": 21.7
+        },
+        {
+          "modelo": "C150",
+          "total": 174,
+          "pct": 9.7
+        },
+        {
+          "modelo": "C152",
+          "total": 158,
+          "pct": 8.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 24.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 58.3,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 17
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBKP",
+          "total": 13
+        }
+      ],
+      "total_aeronaves": 385,
+      "total_modelos": 109,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 48.9
+    },
+    {
+      "ranking": 52,
+      "operador": "QLUE",
+      "total": 1423,
+      "pct": 0.42,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 237,
+          "pct": 16.7
+        },
+        {
+          "modelo": "C152",
+          "total": 175,
+          "pct": 12.3
+        },
+        {
+          "modelo": "C150",
+          "total": 138,
+          "pct": 9.7
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 31.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 58.5,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 17
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 17
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 16
+        }
+      ],
+      "total_aeronaves": 314,
+      "total_modelos": 103,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.3
+    },
+    {
+      "ranking": 53,
+      "operador": "XGET",
+      "total": 1384,
+      "pct": 0.41,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 117,
+          "pct": 8.5
+        },
+        {
+          "modelo": "C152",
+          "total": 100,
+          "pct": 7.2
+        },
+        {
+          "modelo": "E110",
+          "total": 99,
+          "pct": 7.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 31.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 45.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 24
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 21
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 21
+        }
+      ],
+      "total_aeronaves": 392,
+      "total_modelos": 112,
+      "periodo_ativo": "2017 - 2019 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 64.7
+    },
+    {
+      "ranking": 54,
+      "operador": "CAYJ",
+      "total": 1289,
+      "pct": 0.38,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 181,
+          "pct": 14.0
+        },
+        {
+          "modelo": "C152",
+          "total": 130,
+          "pct": 10.1
+        },
+        {
+          "modelo": "C150",
+          "total": 116,
+          "pct": 9.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 23.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 54.8,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 33
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 19
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 15
+        }
+      ],
+      "total_aeronaves": 347,
+      "total_modelos": 97,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 59.3
+    },
+    {
+      "ranking": 55,
+      "operador": "ITLP",
+      "total": 1283,
+      "pct": 0.38,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 249,
+          "pct": 19.4
+        },
+        {
+          "modelo": "C152",
+          "total": 137,
+          "pct": 10.7
+        },
+        {
+          "modelo": "C150",
+          "total": 106,
+          "pct": 8.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 29.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 21
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 20
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 14
+        }
+      ],
+      "total_aeronaves": 292,
+      "total_modelos": 88,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 64.6
+    },
+    {
+      "ranking": 56,
+      "operador": "OAEK",
+      "total": 1282,
+      "pct": 0.38,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 101,
+          "pct": 7.9
+        },
+        {
+          "modelo": "C152",
+          "total": 98,
+          "pct": 7.6
+        },
+        {
+          "modelo": "AS50",
+          "total": 89,
+          "pct": 6.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 27.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 40.1,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 38
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 25
+        },
+        {
+          "rota": "SBBR -> SBSJ",
+          "total": 19
+        }
+      ],
+      "total_aeronaves": 366,
+      "total_modelos": 109,
+      "periodo_ativo": "2015 - 2016 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.5
+    },
+    {
+      "ranking": 57,
+      "operador": "ZCHS",
+      "total": 1181,
+      "pct": 0.35,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 171,
+          "pct": 14.5
+        },
+        {
+          "modelo": "C152",
+          "total": 107,
+          "pct": 9.1
+        },
+        {
+          "modelo": "C150",
+          "total": 105,
+          "pct": 8.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 29.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 50.8,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 12
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 8
+        },
+        {
+          "rota": "SBSC -> SBGL",
+          "total": 8
+        }
+      ],
+      "total_aeronaves": 290,
+      "total_modelos": 89,
+      "periodo_ativo": "2024 - 2025 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.2
+    },
+    {
+      "ranking": 58,
+      "operador": "RJGA",
+      "total": 1146,
+      "pct": 0.34,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 203,
+          "pct": 17.7
+        },
+        {
+          "modelo": "C150",
+          "total": 123,
+          "pct": 10.7
+        },
+        {
+          "modelo": "C152",
+          "total": 101,
+          "pct": 8.8
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 19.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 55.1,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 13
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 12
+        },
+        {
+          "rota": "SBSJ -> SBKP",
+          "total": 11
+        }
+      ],
+      "total_aeronaves": 310,
+      "total_modelos": 105,
+      "periodo_ativo": "2025 - 2026 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 64.3
+    },
+    {
+      "ranking": 59,
+      "operador": "OUMG",
+      "total": 1083,
+      "pct": 0.32,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 132,
+          "pct": 12.2
+        },
+        {
+          "modelo": "C152",
+          "total": 120,
+          "pct": 11.1
+        },
+        {
+          "modelo": "P28A",
+          "total": 54,
+          "pct": 5.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 32.6,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 51.2,
+      "rotas_externas": [
+        {
+          "rota": "SBBR -> SBSJ",
+          "total": 18
+        },
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 17
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 12
+        }
+      ],
+      "total_aeronaves": 317,
+      "total_modelos": 93,
+      "periodo_ativo": "2015 - 2016 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.5
+    },
+    {
+      "ranking": 60,
+      "operador": "QTMW",
+      "total": 1038,
+      "pct": 0.3,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 161,
+          "pct": 15.5
+        },
+        {
+          "modelo": "C150",
+          "total": 159,
+          "pct": 15.3
+        },
+        {
+          "modelo": "C152",
+          "total": 98,
+          "pct": 9.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 27.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.4,
+      "rotas_externas": [
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SDAM",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 277,
+      "total_modelos": 91,
+      "periodo_ativo": "2023 - 2026 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.7
+    },
+    {
+      "ranking": 61,
+      "operador": "FZAE",
+      "total": 999,
+      "pct": 0.29,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 66,
+          "pct": 6.6
+        },
+        {
+          "modelo": "E120",
+          "total": 62,
+          "pct": 6.2
+        },
+        {
+          "modelo": "AS50",
+          "total": 59,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 32.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 17
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 12
+        }
+      ],
+      "total_aeronaves": 297,
+      "total_modelos": 89,
+      "periodo_ativo": "2015 - 2017 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.4
+    },
+    {
+      "ranking": 62,
+      "operador": "ZAJI",
+      "total": 963,
+      "pct": 0.28,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 98,
+          "pct": 10.2
+        },
+        {
+          "modelo": "C150",
+          "total": 77,
+          "pct": 8.0
+        },
+        {
+          "modelo": "E110",
+          "total": 58,
+          "pct": 6.0
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 29.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 42.5,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 13
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 13
+        }
+      ],
+      "total_aeronaves": 283,
+      "total_modelos": 99,
+      "periodo_ativo": "2018 - 2020 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.3
+    },
+    {
+      "ranking": 63,
+      "operador": "OHYC",
+      "total": 958,
+      "pct": 0.28,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 117,
+          "pct": 12.2
+        },
+        {
+          "modelo": "AS50",
+          "total": 64,
+          "pct": 6.7
+        },
+        {
+          "modelo": "E110",
+          "total": 62,
+          "pct": 6.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 33.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 48.7,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 12
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 10
+        }
+      ],
+      "total_aeronaves": 324,
+      "total_modelos": 99,
+      "periodo_ativo": "2015 - 2018 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 57.6
+    },
+    {
+      "ranking": 64,
+      "operador": "NWQA",
+      "total": 956,
+      "pct": 0.28,
+      "modelos_top": [
+        {
+          "modelo": "AS50",
+          "total": 77,
+          "pct": 8.1
+        },
+        {
+          "modelo": "C150",
+          "total": 70,
+          "pct": 7.3
+        },
+        {
+          "modelo": "P28A",
+          "total": 53,
+          "pct": 5.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 29.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 38.9,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 18
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 16
+        },
+        {
+          "rota": "SDUB -> SBSJ",
+          "total": 16
+        }
+      ],
+      "total_aeronaves": 272,
+      "total_modelos": 111,
+      "periodo_ativo": "2019 - 2020 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 61.3
+    },
+    {
+      "ranking": 65,
+      "operador": "XHTR",
+      "total": 936,
+      "pct": 0.27,
+      "modelos_top": [
+        {
+          "modelo": "E110",
+          "total": 75,
+          "pct": 8.0
+        },
+        {
+          "modelo": "C152",
+          "total": 72,
+          "pct": 7.7
+        },
+        {
+          "modelo": "AS50",
+          "total": 71,
+          "pct": 7.6
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 24.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 42.2,
+      "rotas_externas": [
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 18
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 16
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 15
+        }
+      ],
+      "total_aeronaves": 273,
+      "total_modelos": 98,
+      "periodo_ativo": "2018 - 2019 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.4
+    },
+    {
+      "ranking": 66,
+      "operador": "LMOB",
+      "total": 864,
+      "pct": 0.25,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 229,
+          "pct": 26.5
+        },
+        {
+          "modelo": "ZZZZ",
+          "total": 89,
+          "pct": 10.3
+        },
+        {
+          "modelo": "C152",
+          "total": 56,
+          "pct": 6.5
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 34.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 55.9,
+      "rotas_externas": [
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 196,
+      "total_modelos": 84,
+      "periodo_ativo": "2022 - 2022 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.0
+    },
+    {
+      "ranking": 67,
+      "operador": "QGNI",
+      "total": 798,
+      "pct": 0.23,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 124,
+          "pct": 15.5
+        },
+        {
+          "modelo": "C152",
+          "total": 79,
+          "pct": 9.9
+        },
+        {
+          "modelo": "C150",
+          "total": 65,
+          "pct": 8.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 26.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 15
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 11
+        },
+        {
+          "rota": "SBSJ -> SBJD",
+          "total": 10
+        }
+      ],
+      "total_aeronaves": 227,
+      "total_modelos": 87,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 46.2
+    },
+    {
+      "ranking": 68,
+      "operador": "OZHQ",
+      "total": 774,
+      "pct": 0.23,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 83,
+          "pct": 10.7
+        },
+        {
+          "modelo": "C152",
+          "total": 73,
+          "pct": 9.4
+        },
+        {
+          "modelo": "E120",
+          "total": 45,
+          "pct": 5.8
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 33.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.1,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 13
+        },
+        {
+          "rota": "SBBR -> SBSJ",
+          "total": 12
+        }
+      ],
+      "total_aeronaves": 213,
+      "total_modelos": 75,
+      "periodo_ativo": "2015 - 2016 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 58.7
+    },
+    {
+      "ranking": 69,
+      "operador": "YPQC",
+      "total": 735,
+      "pct": 0.22,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 171,
+          "pct": 23.3
+        },
+        {
+          "modelo": "MC01",
+          "total": 80,
+          "pct": 10.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 46,
+          "pct": 6.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 57.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 7
+        },
+        {
+          "rota": "SDGS -> ZZZZ",
+          "total": 7
+        },
+        {
+          "rota": "SDCO -> SBSJ",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 170,
+      "total_modelos": 72,
+      "periodo_ativo": "2022 - 2023 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 51.8
+    },
+    {
+      "ranking": 70,
+      "operador": "XYTF",
+      "total": 711,
+      "pct": 0.21,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 126,
+          "pct": 17.7
+        },
+        {
+          "modelo": "C150",
+          "total": 66,
+          "pct": 9.3
+        },
+        {
+          "modelo": "C152",
+          "total": 45,
+          "pct": 6.3
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 22.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 50.5,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 11
+        },
+        {
+          "rota": "SDGS -> SJAD",
+          "total": 9
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 224,
+      "total_modelos": 86,
+      "periodo_ativo": "2024 - 2026 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 82.3
+    },
+    {
+      "ranking": 71,
+      "operador": "KCFR",
+      "total": 664,
+      "pct": 0.19,
+      "modelos_top": [
+        {
+          "modelo": "E110",
+          "total": 67,
+          "pct": 10.1
+        },
+        {
+          "modelo": "C150",
+          "total": 52,
+          "pct": 7.8
+        },
+        {
+          "modelo": "AS50",
+          "total": 43,
+          "pct": 6.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 27.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 46.5,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 13
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 12
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 11
+        }
+      ],
+      "total_aeronaves": 204,
+      "total_modelos": 79,
+      "periodo_ativo": "2017 - 2019 (3 anos)",
+      "anos_servico_qtd": 3,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 58.9
+    },
+    {
+      "ranking": 72,
+      "operador": "DJMT",
+      "total": 657,
+      "pct": 0.19,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 142,
+          "pct": 21.6
+        },
+        {
+          "modelo": "P28A",
+          "total": 71,
+          "pct": 10.8
+        },
+        {
+          "modelo": "C152",
+          "total": 52,
+          "pct": 7.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 56.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 63.3,
+      "rotas_externas": [
+        {
+          "rota": "ZZZZ -> SBSJ",
+          "total": 9
+        },
+        {
+          "rota": "SDGS -> SJAD",
+          "total": 6
+        },
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 138,
+      "total_modelos": 59,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 67.1
+    },
+    {
+      "ranking": 73,
+      "operador": "EXIQ",
+      "total": 564,
+      "pct": 0.17,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 77,
+          "pct": 13.7
+        },
+        {
+          "modelo": "AS50",
+          "total": 60,
+          "pct": 10.6
+        },
+        {
+          "modelo": "C152",
+          "total": 33,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 48.6,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 9
+        },
+        {
+          "rota": "SBSP -> SBMT",
+          "total": 6
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 5
+        }
+      ],
+      "total_aeronaves": 194,
+      "total_modelos": 81,
+      "periodo_ativo": "2017 - 2018 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 68.1
+    },
+    {
+      "ranking": 74,
+      "operador": "SEUP",
+      "total": 535,
+      "pct": 0.16,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 76,
+          "pct": 14.2
+        },
+        {
+          "modelo": "AS50",
+          "total": 43,
+          "pct": 8.0
+        },
+        {
+          "modelo": "C150",
+          "total": 40,
+          "pct": 7.5
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 28.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 49.5,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 7
+        },
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 183,
+      "total_modelos": 78,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.1
+    },
+    {
+      "ranking": 75,
+      "operador": "EBDA",
+      "total": 529,
+      "pct": 0.15,
+      "modelos_top": [
+        {
+          "modelo": "E110",
+          "total": 48,
+          "pct": 9.1
+        },
+        {
+          "modelo": "E170",
+          "total": 36,
+          "pct": 6.8
+        },
+        {
+          "modelo": "R44",
+          "total": 30,
+          "pct": 5.7
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 17.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 44.6,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 13
+        },
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 11
+        },
+        {
+          "rota": "SBTA -> SSUB",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 217,
+      "total_modelos": 79,
+      "periodo_ativo": "2016 - 2017 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.7
+    },
+    {
+      "ranking": 76,
+      "operador": "YJDI",
+      "total": 510,
+      "pct": 0.15,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 115,
+          "pct": 22.5
+        },
+        {
+          "modelo": "MC01",
+          "total": 37,
+          "pct": 7.3
+        },
+        {
+          "modelo": "P28A",
+          "total": 35,
+          "pct": 6.9
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 37.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 58.4,
+      "rotas_externas": [
+        {
+          "rota": "SIBH -> SBSJ",
+          "total": 5
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 5
+        },
+        {
+          "rota": "SBSJ -> SDAI",
+          "total": 5
+        }
+      ],
+      "total_aeronaves": 123,
+      "total_modelos": 57,
+      "periodo_ativo": "2022 - 2023 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 55.3
+    },
+    {
+      "ranking": 77,
+      "operador": "JZYR",
+      "total": 478,
+      "pct": 0.14,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 51,
+          "pct": 10.7
+        },
+        {
+          "modelo": "C150",
+          "total": 45,
+          "pct": 9.4
+        },
+        {
+          "modelo": "R44",
+          "total": 30,
+          "pct": 6.3
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 30.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 44.4,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBEG",
+          "total": 7
+        },
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 171,
+      "total_modelos": 63,
+      "periodo_ativo": "2015 - 2017 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 61.3
+    },
+    {
+      "ranking": 78,
+      "operador": "OCSL",
+      "total": 445,
+      "pct": 0.13,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 82,
+          "pct": 18.4
+        },
+        {
+          "modelo": "C152",
+          "total": 49,
+          "pct": 11.0
+        },
+        {
+          "modelo": "C150",
+          "total": 33,
+          "pct": 7.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 27.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 55.7,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 14
+        },
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 6
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 128,
+      "total_modelos": 65,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 58.2
+    },
+    {
+      "ranking": 79,
+      "operador": "GKPD",
+      "total": 407,
+      "pct": 0.12,
+      "modelos_top": [
+        {
+          "modelo": "E550",
+          "total": 41,
+          "pct": 10.1
+        },
+        {
+          "modelo": "R44",
+          "total": 26,
+          "pct": 6.4
+        },
+        {
+          "modelo": "AS50",
+          "total": 23,
+          "pct": 5.7
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 26.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 40.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 10
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBJD -> SBSJ",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 141,
+      "total_modelos": 72,
+      "periodo_ativo": "2018 - 2018 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 63.9
+    },
+    {
+      "ranking": 80,
+      "operador": "OAIU",
+      "total": 376,
+      "pct": 0.11,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 64,
+          "pct": 17.0
+        },
+        {
+          "modelo": "C152",
+          "total": 47,
+          "pct": 12.5
+        },
+        {
+          "modelo": "P28A",
+          "total": 23,
+          "pct": 6.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 33.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 48.9,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBSJ",
+          "total": 12
+        },
+        {
+          "rota": "SBBR -> SBSJ",
+          "total": 12
+        },
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 7
+        }
+      ],
+      "total_aeronaves": 135,
+      "total_modelos": 64,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 49.5
+    },
+    {
+      "ranking": 81,
+      "operador": "RFLS",
+      "total": 323,
+      "pct": 0.09,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 44,
+          "pct": 13.6
+        },
+        {
+          "modelo": "R22",
+          "total": 23,
+          "pct": 7.1
+        },
+        {
+          "modelo": "E120",
+          "total": 22,
+          "pct": 6.8
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 33.7,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 45.8,
+      "rotas_externas": [
+        {
+          "rota": "ZZZZ -> SBSJ",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 119,
+      "total_modelos": 54,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 53.9
+    },
+    {
+      "ranking": 82,
+      "operador": "EHDU",
+      "total": 307,
+      "pct": 0.09,
+      "modelos_top": [
+        {
+          "modelo": "E110",
+          "total": 26,
+          "pct": 8.5
+        },
+        {
+          "modelo": "C150",
+          "total": 25,
+          "pct": 8.1
+        },
+        {
+          "modelo": "E120",
+          "total": 18,
+          "pct": 5.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 28.3,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 41.7,
+      "rotas_externas": [
+        {
+          "rota": "SBMT -> SBGR",
+          "total": 11
+        },
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 5
+        },
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 5
+        }
+      ],
+      "total_aeronaves": 117,
+      "total_modelos": 61,
+      "periodo_ativo": "2018 - 2019 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 63.8
+    },
+    {
+      "ranking": 83,
+      "operador": "ENKA",
+      "total": 277,
+      "pct": 0.08,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 45,
+          "pct": 16.2
+        },
+        {
+          "modelo": "C152",
+          "total": 42,
+          "pct": 15.2
+        },
+        {
+          "modelo": "C208",
+          "total": 25,
+          "pct": 9.0
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 28.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 66.1,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 5
+        },
+        {
+          "rota": "SBSJ -> SBSV",
+          "total": 3
+        },
+        {
+          "rota": "SBTA -> SBSJ",
+          "total": 3
+        }
+      ],
+      "total_aeronaves": 82,
+      "total_modelos": 46,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 80.9
+    },
+    {
+      "ranking": 84,
+      "operador": "UKOY",
+      "total": 238,
+      "pct": 0.07,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 49,
+          "pct": 20.6
+        },
+        {
+          "modelo": "P28A",
+          "total": 20,
+          "pct": 8.4
+        },
+        {
+          "modelo": "MC01",
+          "total": 20,
+          "pct": 8.4
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 38.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 45.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBYS",
+          "total": 7
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 7
+        },
+        {
+          "rota": "SBRJ -> SBSP",
+          "total": 6
+        }
+      ],
+      "total_aeronaves": 83,
+      "total_modelos": 42,
+      "periodo_ativo": "2023 - 2024 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 52.9
+    },
+    {
+      "ranking": 85,
+      "operador": "ZUJN",
+      "total": 213,
+      "pct": 0.06,
+      "modelos_top": [
+        {
+          "modelo": "MC01",
+          "total": 34,
+          "pct": 16.0
+        },
+        {
+          "modelo": "C152",
+          "total": 28,
+          "pct": 13.1
+        },
+        {
+          "modelo": "P28A",
+          "total": 9,
+          "pct": 4.2
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 17.4,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 54.5,
+      "rotas_externas": [
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 6
+        },
+        {
+          "rota": "SBMT -> SSUB",
+          "total": 3
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 3
+        }
+      ],
+      "total_aeronaves": 84,
+      "total_modelos": 54,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 62.4
+    },
+    {
+      "ranking": 86,
+      "operador": "DYFL",
+      "total": 210,
+      "pct": 0.06,
+      "modelos_top": [
+        {
+          "modelo": "PA34",
+          "total": 21,
+          "pct": 10.0
+        },
+        {
+          "modelo": "R44",
+          "total": 16,
+          "pct": 7.6
+        },
+        {
+          "modelo": "E120",
+          "total": 13,
+          "pct": 6.2
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 24.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 38.6,
+      "rotas_externas": [
+        {
+          "rota": "SBGP -> SBSJ",
+          "total": 9
+        },
+        {
+          "rota": "SBSJ -> SBGP",
+          "total": 7
+        },
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 5
+        }
+      ],
+      "total_aeronaves": 102,
+      "total_modelos": 44,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 64.3
+    },
+    {
+      "ranking": 87,
+      "operador": "ANKM",
+      "total": 192,
+      "pct": 0.06,
+      "modelos_top": [
+        {
+          "modelo": "C152",
+          "total": 26,
+          "pct": 13.5
+        },
+        {
+          "modelo": "C150",
+          "total": 20,
+          "pct": 10.4
+        },
+        {
+          "modelo": "PA38",
+          "total": 14,
+          "pct": 7.3
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 42.2,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 46.9,
+      "rotas_externas": [
+        {
+          "rota": "SBUR -> SBTA",
+          "total": 4
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 3
+        },
+        {
+          "rota": "SBJD -> SBMT",
+          "total": 3
+        }
+      ],
+      "total_aeronaves": 68,
+      "total_modelos": 41,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 65.6
+    },
+    {
+      "ranking": 88,
+      "operador": "YUBN",
+      "total": 124,
+      "pct": 0.04,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 39,
+          "pct": 31.5
+        },
+        {
+          "modelo": "C152",
+          "total": 16,
+          "pct": 12.9
+        },
+        {
+          "modelo": "P28A",
+          "total": 10,
+          "pct": 8.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 39.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 46.8,
+      "rotas_externas": [
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 4
+        },
+        {
+          "rota": "SJAD -> SDGS",
+          "total": 2
+        },
+        {
+          "rota": "SBSJ -> SBLS",
+          "total": 2
+        }
+      ],
+      "total_aeronaves": 38,
+      "total_modelos": 23,
+      "periodo_ativo": "2022 - 2022 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 50.8
+    },
+    {
+      "ranking": 89,
+      "operador": "YJOZ",
+      "total": 72,
+      "pct": 0.02,
+      "modelos_top": [
+        {
+          "modelo": "C208",
+          "total": 12,
+          "pct": 16.7
+        },
+        {
+          "modelo": "MC01",
+          "total": 6,
+          "pct": 8.3
+        },
+        {
+          "modelo": "C152",
+          "total": 5,
+          "pct": 6.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 12.5,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.9,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBBR",
+          "total": 1
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 1
+        },
+        {
+          "rota": "SBMT -> ZZZZ",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 43,
+      "total_modelos": 30,
+      "periodo_ativo": "2026 - 2026 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 73.6
+    },
+    {
+      "ranking": 90,
+      "operador": "XUPJ",
+      "total": 56,
+      "pct": 0.02,
+      "modelos_top": [
+        {
+          "modelo": "R22",
+          "total": 8,
+          "pct": 14.3
+        },
+        {
+          "modelo": "AS50",
+          "total": 6,
+          "pct": 10.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 6,
+          "pct": 10.7
+        }
+      ],
+      "categoria_predominante": "Helicóptero",
+      "pct_tgl": 33.9,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 53.6,
+      "rotas_externas": [
+        {
+          "rota": "SIKY -> SIBH",
+          "total": 2
+        },
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 1
+        },
+        {
+          "rota": "SIFV -> SBSJ",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 30,
+      "total_modelos": 21,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 58.9
+    },
+    {
+      "ranking": 91,
+      "operador": "RXJB",
+      "total": 53,
+      "pct": 0.02,
+      "modelos_top": [
+        {
+          "modelo": "AS50",
+          "total": 6,
+          "pct": 11.3
+        },
+        {
+          "modelo": "E110",
+          "total": 5,
+          "pct": 9.4
+        },
+        {
+          "modelo": "DV20",
+          "total": 3,
+          "pct": 5.7
+        }
+      ],
+      "categoria_predominante": "Helicóptero",
+      "pct_tgl": 15.1,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 13.2,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 2
+        },
+        {
+          "rota": "SBSP -> SBSJ",
+          "total": 2
+        },
+        {
+          "rota": "SBSJ -> SBGL",
+          "total": 2
+        }
+      ],
+      "total_aeronaves": 40,
+      "total_modelos": 27,
+      "periodo_ativo": "2017 - 2018 (2 anos)",
+      "anos_servico_qtd": 2,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 94.3
+    },
+    {
+      "ranking": 92,
+      "operador": "ASKF",
+      "total": 48,
+      "pct": 0.01,
+      "modelos_top": [
+        {
+          "modelo": "B737",
+          "total": 16,
+          "pct": 33.3
+        },
+        {
+          "modelo": "PA34",
+          "total": 11,
+          "pct": 22.9
+        },
+        {
+          "modelo": "E190",
+          "total": 5,
+          "pct": 10.4
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Comercial Regular (Passageiros)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBRB -> SBBR",
+          "total": 6
+        },
+        {
+          "rota": "SBRB -> SBPV",
+          "total": 6
+        },
+        {
+          "rota": "SBPV -> SBRB",
+          "total": 5
+        }
+      ],
+      "total_aeronaves": 18,
+      "total_modelos": 11,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.0
+    },
+    {
+      "ranking": 93,
+      "operador": "OPRT",
+      "total": 38,
+      "pct": 0.01,
+      "modelos_top": [
+        {
+          "modelo": "TUCA",
+          "total": 8,
+          "pct": 21.1
+        },
+        {
+          "modelo": "FB1A",
+          "total": 6,
+          "pct": 15.8
+        },
+        {
+          "modelo": "A320",
+          "total": 3,
+          "pct": 7.9
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 15.8,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 10.5,
+      "rotas_externas": [
+        {
+          "rota": "SBSJ -> SBSP",
+          "total": 7
+        },
+        {
+          "rota": "ZZZZ -> SBSJ",
+          "total": 5
+        },
+        {
+          "rota": "SBSJ -> SBMT",
+          "total": 3
+        }
+      ],
+      "total_aeronaves": 21,
+      "total_modelos": 17,
+      "periodo_ativo": "2015 - 2023 (4 anos)",
+      "anos_servico_qtd": 4,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 50.0
+    },
+    {
+      "ranking": 94,
+      "operador": "LXZA",
+      "total": 37,
+      "pct": 0.01,
+      "modelos_top": [
+        {
+          "modelo": "C150",
+          "total": 11,
+          "pct": 29.7
+        },
+        {
+          "modelo": "P28A",
+          "total": 5,
+          "pct": 13.5
+        },
+        {
+          "modelo": "ZZZZ",
+          "total": 3,
+          "pct": 8.1
+        }
+      ],
+      "categoria_predominante": "Treinamento / Monomotor",
+      "pct_tgl": 29.7,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 56.8,
+      "rotas_externas": [
+        {
+          "rota": "SDGS -> SJAD",
+          "total": 1
+        },
+        {
+          "rota": "SBSJ -> SBRJ",
+          "total": 1
+        },
+        {
+          "rota": "SBRJ -> SBSJ",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 18,
+      "total_modelos": 16,
+      "periodo_ativo": "2022 - 2022 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 100.0
+    },
+    {
+      "ranking": 95,
+      "operador": "DGNB",
+      "total": 14,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "B737",
+          "total": 5,
+          "pct": 35.7
+        },
+        {
+          "modelo": "PA34",
+          "total": 2,
+          "pct": 14.3
+        },
+        {
+          "modelo": "AS50",
+          "total": 2,
+          "pct": 14.3
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Comercial Regular (Passageiros)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBPV -> SBRB",
+          "total": 2
+        },
+        {
+          "rota": "SBRB -> SBCZ",
+          "total": 2
+        },
+        {
+          "rota": "SBCZ -> SBRB",
+          "total": 2
+        }
+      ],
+      "total_aeronaves": 9,
+      "total_modelos": 7,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 50.0
+    },
+    {
+      "ranking": 96,
+      "operador": "NRQP",
+      "total": 13,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "B737",
+          "total": 4,
+          "pct": 30.8
+        },
+        {
+          "modelo": "PA34",
+          "total": 3,
+          "pct": 23.1
+        },
+        {
+          "modelo": "E190",
+          "total": 2,
+          "pct": 15.4
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Comercial Regular (Passageiros)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBPV -> SBRB",
+          "total": 3
+        },
+        {
+          "rota": "SBCZ -> SBRB",
+          "total": 2
+        },
+        {
+          "rota": "SBRB -> SBPV",
+          "total": 2
+        }
+      ],
+      "total_aeronaves": 11,
+      "total_modelos": 6,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 46.2
+    },
+    {
+      "ranking": 97,
+      "operador": "CZKF",
+      "total": 11,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "PA34",
+          "total": 3,
+          "pct": 27.3
+        },
+        {
+          "modelo": "E190",
+          "total": 2,
+          "pct": 18.2
+        },
+        {
+          "modelo": "B737",
+          "total": 2,
+          "pct": 18.2
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Aviação Geral / Civil",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SDNQ -> SBRB",
+          "total": 4
+        },
+        {
+          "rota": "SBBR -> SBRB",
+          "total": 2
+        },
+        {
+          "rota": "SBRB -> SBBR",
+          "total": 2
+        }
+      ],
+      "total_aeronaves": 11,
+      "total_modelos": 7,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 100.0
+    },
+    {
+      "ranking": 98,
+      "operador": "AJOB",
+      "total": 7,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "B737",
+          "total": 2,
+          "pct": 28.6
+        },
+        {
+          "modelo": "PA32",
+          "total": 2,
+          "pct": 28.6
+        },
+        {
+          "modelo": "A320",
+          "total": 1,
+          "pct": 14.3
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Comercial Regular (Passageiros)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBPV -> SBRB",
+          "total": 1
+        },
+        {
+          "rota": "SBBR -> SBRB",
+          "total": 1
+        },
+        {
+          "rota": "SBRB -> SBCZ",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 6,
+      "total_modelos": 5,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 100.0
+    },
+    {
+      "ranking": 99,
+      "operador": "KGWR",
+      "total": 3,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "B737",
+          "total": 2,
+          "pct": 66.7
+        },
+        {
+          "modelo": "BE40",
+          "total": 1,
+          "pct": 33.3
+        }
+      ],
+      "categoria_predominante": "Jato (Executivo / Comercial)",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Comercial Regular (Passageiros)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBRB -> SBPV",
+          "total": 2
+        },
+        {
+          "rota": "SBCZ -> SBRB",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 2,
+      "total_modelos": 2,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 66.7
+    },
+    {
+      "ranking": 100,
+      "operador": "PSS",
+      "total": 1,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "E145",
+          "total": 1,
+          "pct": 100.0
+        }
+      ],
+      "categoria_predominante": "Outros / Especiais",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Militar (FAB / BAVEX / DCTA)",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBGL -> SBSJ",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 1,
+      "total_modelos": 1,
+      "periodo_ativo": "2018 - 2018 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Vespertino (12h-18h)",
+      "pct_turno": 100.0
+    },
+    {
+      "ranking": 101,
+      "operador": "AXFD",
+      "total": 1,
+      "pct": 0.0,
+      "modelos_top": [
+        {
+          "modelo": "E110",
+          "total": 1,
+          "pct": 100.0
+        }
+      ],
+      "categoria_predominante": "Turboélice / Regional",
+      "pct_tgl": 0.0,
+      "tv_predominante": "Não Regular / Táxi Aéreo",
+      "pct_local": 0.0,
+      "rotas_externas": [
+        {
+          "rota": "SBRB -> SSRA",
+          "total": 1
+        }
+      ],
+      "total_aeronaves": 1,
+      "total_modelos": 1,
+      "periodo_ativo": "2015 - 2015 (1 anos)",
+      "anos_servico_qtd": 1,
+      "turno_predominante": "Matutino (06h-12h)",
+      "pct_turno": 100.0
+    }
+  ],
+  "operadores_evolucao_anual": {
+    "anos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "series": {
+      "YSJH": [
+        763,
+        1509,
+        1348,
+        1216,
+        797,
+        1338,
+        1558,
+        1480,
+        2105,
+        2505,
+        1924,
+        1817
+      ],
+      "HSIE": [
+        0,
+        1017,
+        2395,
+        1939,
+        1212,
+        906,
+        1606,
+        1857,
+        2444,
+        2206,
+        0,
+        0
+      ],
+      "IPTK": [
+        1434,
+        2051,
+        1377,
+        1431,
+        1384,
+        1095,
+        2068,
+        2114,
+        1986,
+        0,
+        0,
+        0
+      ],
+      "DZEL": [
+        954,
+        1025,
+        955,
+        1346,
+        1560,
+        1648,
+        2067,
+        2574,
+        1279,
+        0,
+        0,
+        0
+      ],
+      "EAFM": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        692,
+        1403,
+        2011,
+        2460,
+        3248,
+        2976,
+        0
+      ]
+    }
+  },
+  "operadores_frotas_top10": {
+    "operadores": [
+      "YSJH",
+      "HSIE",
+      "IPTK",
+      "DZEL",
+      "EAFM",
+      "WJKQ",
+      "RMOU",
+      "MDUF",
+      "IWDG",
+      "YXPJ"
+    ],
+    "categorias": {
+      "Treinamento / Monomotor": [
+        7261,
+        5776,
+        5193,
+        4587,
+        6221,
+        3871,
+        3680,
+        4432,
+        3841,
+        4307
+      ],
+      "Helicóptero": [
+        2076,
+        1911,
+        1810,
+        1587,
+        998,
+        1222,
+        1315,
+        951,
+        1130,
+        968
+      ],
+      "Turboélice / Regional": [
+        1737,
+        1562,
+        1493,
+        1335,
+        1073,
+        1133,
+        1069,
+        936,
+        1131,
+        1004
+      ],
+      "Jato (Executivo / Comercial)": [
+        771,
+        622,
+        648,
+        536,
+        479,
+        456,
+        430,
+        467,
+        390,
+        445
+      ],
+      "Bimotor Pistão": [
+        639,
+        643,
+        588,
+        490,
+        415,
+        413,
+        399,
+        373,
+        368,
+        379
+      ],
+      "Outros / Especiais": [
+        5876,
+        5068,
+        5208,
+        4873,
+        3604,
+        3724,
+        3909,
+        3430,
+        3472,
+        3208
+      ]
+    }
+  },
+  "operadores_missoes_top10": {
+    "operadores": [
+      "YSJH",
+      "HSIE",
+      "IPTK",
+      "DZEL",
+      "EAFM",
+      "WJKQ",
+      "RMOU",
+      "MDUF",
+      "IWDG",
+      "YXPJ"
+    ],
+    "missoes": {
+      "Aviação Geral / Civil": [
+        13895,
+        11757,
+        10916,
+        9796,
+        10394,
+        7964,
+        7896,
+        8146,
+        7660,
+        7876
+      ],
+      "Militar (FAB / BAVEX / DCTA)": [
+        2517,
+        2217,
+        2309,
+        2101,
+        1524,
+        1757,
+        1803,
+        1511,
+        1648,
+        1494
+      ],
+      "Comercial Regular (Passageiros)": [
+        1214,
+        1072,
+        1124,
+        1009,
+        501,
+        678,
+        654,
+        577,
+        656,
+        619
+      ],
+      "Experimental / Testes (Embraer)": [
+        481,
+        359,
+        457,
+        335,
+        197,
+        294,
+        358,
+        224,
+        226,
+        198
+      ],
+      "Não Regular / Táxi Aéreo": [
+        253,
+        177,
+        134,
+        167,
+        174,
+        126,
+        91,
+        131,
+        142,
+        124
+      ]
+    }
+  },
   "top_rotas": [
     {
       "proced": "SBGP",
